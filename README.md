@@ -1,16 +1,6 @@
 ﻿Description :
 =============
-I,  K.M. Arun Kumar alias Arunkumar Murugeswaran, just shared my works, which I worked as learning path and practiced Embedded C programming using PIC16F887 (Microchip's 8 bit microcontroller in PIC16 family) for interface of LED, Switch, 7 Segment LED, Keypad and LCD, Timer, ADC, Interrupt, UART, EEPROM, RTC, SPI, I2C, GSM and CCP. Other features are not implemented. 
-
-Projects, using PIC16F887, are included with Design, development, implemented, simulated and tested, by using a simulator are as follows :
-===========================================================================================================================================
- 1: smart milk vending machine. 
- 2: Simple Digital Single phase Electric Motor Controller controlled by Electric current.
- 3: Simple Digital Single phase Electric Motor Controller controlled by Electric Voltage.
- 4: Soil moisture based Water spraying system for nursery farms.
- 5: Traffic density congestion control based traffic signal controller.
- 6: Construction automation for mixing of cement, sand and water in the construction mixture equipment. 
- 7: In LCD, running text is displayed either to left or to right with specified number of gaps between consecutive same text display.
+I, K.M. Arun Kumar alias Arunkumar Murugeswaran, just shared my works, which I worked as learning path and practiced Embedded C programming using PIC16F887 (Microchip's 8 bit microcontroller in PIC16 family) such as in simiulation, single phase motor indicated as lamp and R supply(ie as single phase supply).                VAR_POWER_POT is adjusted to vary voltage across VAR_POWER_POT to simulate R supply voltage.  When voltage across VAR_POWER_POT is within range of >= MIN_R_RMS_VOLTAGE and <= MAX_R_RMS_VOLTAGE, then trigger TRIAC gate ON to start or continue run motor and MOTOR_ON LED is used as an indicator. When voltage across VAR_POWER_POT is either < MIN_R_RMS_VOLTAGE, indicated by R_VOLTAGE_MIN LED or > MAX_R_RMS_VOLTAGE, indicated by R_VOLTAGE_MAX LED, then stop the motor by trigger TRIAC gate OFF, as R supply voltage is abnormal, which will damage the motor, others machines and circuits connected to R supply. 
 
 Purpose :
 =========
