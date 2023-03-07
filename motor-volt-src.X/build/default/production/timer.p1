@@ -1,35 +1,39 @@
 Version 3.2 HI-TECH Software Intermediate Code
-"65 adc.h
-[s S145 `ul 1 :2 `uc 1 :2 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S145 . adc_value_channel adc_cur_service_type adc_clk_src_type volt_ref adc_result_format_justfied_type adc_vref_neg_src_type adc_vref_plus_src_type ]
-"23 adc.c
-[c E1739 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 .. ]
-[n E1739 . ADC_CH_00 ADC_CH_01 ADC_CH_02 ADC_CH_03 ADC_CH_04 ADC_CH_05 ADC_CH_06 ADC_CH_07 ADC_CH_08 ADC_CH_09 ADC_CH_10 ADC_CH_11 ADC_CH_12 ADC_CH_13 ADC_INVALID_CH_14  ]
-"83 adc.h
-[v _Is_ADC_Converting `(uc ~T0 @X0 0 ef ]
-"1243 C:\Program Files\Microchip\xc8\v1.44\include\pic16f887.h
-[v _ADCON0 `Vuc ~T0 @X0 0 e@31 ]
-"2975
-[v _ADCON1 `Vuc ~T0 @X0 0 e@159 ]
-"1249
-[s S45 :1 `uc 1 :1 `uc 1 :4 `uc 1 :2 `uc 1 ]
-[n S45 . ADON GO_nDONE CHS ADCS ]
-"1255
-[s S46 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S46 . . GO CHS0 CHS1 CHS2 CHS3 ADCS0 ADCS1 ]
-"1265
-[s S47 :1 `uc 1 :1 `uc 1 ]
-[n S47 . . nDONE ]
-"1269
-[s S48 :1 `uc 1 :1 `uc 1 ]
-[n S48 . . GO_DONE ]
-"1248
-[u S44 `S45 1 `S46 1 `S47 1 `S48 1 ]
-[n S44 . . . . . ]
-"1274
-[v _ADCON0bits `VS44 ~T0 @X0 0 e@31 ]
-"3574
-[v _ADIF `Vb ~T0 @X0 0 e@102 ]
+"22 timer.c
+[c E1743 0 .. ]
+[n E1743 . TMR1_STOP_STATE  ]
+"24
+[c E1749 4 3 2 1 0 .. ]
+[n E1749 . TMR1_INVALID_SERVICE TMR1_TIMER_INTP_SERVICE TMR1_TIMER_POLLING_SERVICE TMR1_COUNTER_INTP_SERVICE TMR1_COUNTER_POLLING_SERVICE  ]
+"29
+[c E1746 0 .. ]
+[n E1746 . TMR2_STOP_STATE  ]
+"31
+[c E1776 4 3 2 .. ]
+[n E1776 . TMR2_INVALID_SERVICE TMR2_PWM_INTP_SERVICE TMR2_PWM_POLLING_SERVICE  ]
+"48
+[c E1756 0 192 64 .. ]
+[n E1756 . TMR1_GATE_CTRL_DISABLE TMR1_GATE_CTRL_ACTIVE_HIGH TMR1_GATE_CTRL_ACTIVE_LOW  ]
+[c E1770 48 32 16 0 .. ]
+[n E1770 . TMR1_INPUT_CLK_PRESCALE_8 TMR1_INPUT_CLK_PRESCALE_4 TMR1_INPUT_CLK_PRESCALE_2 TMR1_INPUT_CLK_PRESCALE_1  ]
+[c E1766 8 0 .. ]
+[n E1766 . TMR1_LP_OSC_ENABLE TMR1_LP_OSC_DISABLE  ]
+[c E1761 0 2 6 .. ]
+[n E1761 . TMR1_CLK_SRC_INTR_OSC TMR1_CLK_SRC_EXTR_SYNC TMR1_CLK_SRC_EXTR_NO_SYNC  ]
+"84 timer.h
+[v _Timer1_Stop `(v ~T0 @X0 0 ef ]
+"669 C:\Program Files\Microchip\xc8\v1.44\include\pic16f887.h
+[v _T1CON `Vuc ~T0 @X0 0 e@16 ]
+"85 timer.h
+[v _Timer1_Prescale `(v ~T0 @X0 0 ef ]
+"86
+[v _Timer1_Load_Init_Val_Calc `(v ~T0 @X0 0 ef1`Cul ]
+"25 uart.h
+[v _UART_Transmit_Str `(v ~T0 @X0 0 ef1`*Cuc ]
+"648 C:\Program Files\Microchip\xc8\v1.44\include\pic16f887.h
+[v _TMR1 `Vus ~T0 @X0 0 e@14 ]
+"4098
+[v _TMR1IF `Vb ~T0 @X0 0 e@96 ]
 "1706
 [s S63 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S63 . TMR1IE TMR2IE CCP1IE SSPIE TXIE RCIE ADIE ]
@@ -49,55 +53,56 @@ Version 3.2 HI-TECH Software Intermediate Code
 [n S15 . . . ]
 "480
 [v _INTCONbits `VS15 ~T0 @X0 0 e@11 ]
-[v F1637 `(v ~T0 @X0 1 tf1`ul ]
-"153 C:\Program Files\Microchip\xc8\v1.44\include\pic.h
-[v __delay `JF1637 ~T0 @X0 0 e ]
-[p i __delay ]
-"3782 C:\Program Files\Microchip\xc8\v1.44\include\pic16f887.h
-[v _GO `Vb ~T0 @X0 0 e@249 ]
-"3570
-[v _ADFM `Vb ~T0 @X0 0 e@1279 ]
-"2968
-[v _ADRESL `Vuc ~T0 @X0 0 e@158 ]
-"1236
-[v _ADRESH `Vuc ~T0 @X0 0 e@30 ]
-"97 main.h
-[s S140 `ui -> 2 `i ]
-[n S140 . value_byte ]
-"101
-[s S141 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S141 . value_bit_0 value_bit_1 value_bit_2 value_bit_3 value_bit_4 value_bit_5 value_bit_6 value_bit_7 value_bit_8 value_bit_9 value_bit_10 value_bit_11 value_bit_12 value_bit_13 value_bit_14 value_bit_15 ]
-"94
-[u S139 `ul 1 `S140 1 `S141 1 ]
-[n S139 . value_long val_in_bytes val_in_bits ]
-"124
-[s S143 `i -> 2 `i ]
-[n S143 . value_byte ]
-"128
-[s S144 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S144 . value_bit_0 value_bit_1 value_bit_2 value_bit_3 value_bit_4 value_bit_5 value_bit_6 value_bit_7 value_bit_8 value_bit_9 value_bit_10 value_bit_11 value_bit_12 value_bit_13 value_bit_14 value_bit_15 ]
-"121
-[u S142 `l 1 `S143 1 `S144 1 ]
-[n S142 . value_long val_in_bytes val_in_bits ]
-"92
-[u S138 `S139 1 `S142 1 ]
-[n S138 . unsigned_val signed_val ]
-"180
-[v _to_disp `S138 ~T0 @X0 0 e ]
-"25 uart.h
-[v _UART_Transmit_Str `(v ~T0 @X0 0 ef1`*Cuc ]
-"158 adc.c
-[c E1694 1 2 3 4 5 17 18 19 20 21 33 34 35 36 .. ]
-[n E1694 . DISP_UNSIGN_NUM_DIGIT1 DISP_UNSIGN_NUM_DIGIT2 DISP_UNSIGN_NUM_DIGIT3 DISP_UNSIGN_NUM_DIGIT4 DISP_UNSIGN_NUM_DIGIT5 DISP_SIGN_NUM_DIGIT1 DISP_SIGN_NUM_DIGIT2 DISP_SIGN_NUM_DIGIT3 DISP_SIGN_NUM_DIGIT4 DISP_SIGN_NUM_DIGIT5 DISP_HEX_DIGIT1 DISP_HEX_DIGIT2 DISP_HEX_DIGIT3 DISP_HEX_DIGIT4  ]
-"28 uart.h
-[v _UART_Transmit_Num `(v ~T0 @X0 0 ef2`CE1694`CS138 ]
-"24
-[v _UART_Transmit_Char `(v ~T0 @X0 0 ef1`Cuc ]
-[v F1777 `*ul ~T0 @X0 1 t ]
-[v F1779 `*ul ~T0 @X0 1 t ]
-[v F1783 `*ui ~T0 @X0 1 t ]
-[v F1785 `*ui ~T0 @X0 1 t ]
-[v F1832 `*ul ~T0 @X0 1 t ]
+"675
+[s S23 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S23 . TMR1ON TMR1CS nT1SYNC T1OSCEN T1CKPS TMR1GE T1GINV ]
+"684
+[s S24 :2 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S24 . . T1INSYNC . T1CKPS0 T1CKPS1 . T1GIV ]
+"693
+[s S25 :2 `uc 1 :1 `uc 1 ]
+[n S25 . . T1SYNC ]
+"674
+[u S22 `S23 1 `S24 1 `S25 1 ]
+[n S22 . . . . ]
+"698
+[v _T1CONbits `VS22 ~T0 @X0 0 e@16 ]
+"4068
+[v _T1CKPS0 `Vb ~T0 @X0 0 e@132 ]
+"4070
+[v _T1CKPS1 `Vb ~T0 @X0 0 e@133 ]
+"662
+[v _TMR1H `Vuc ~T0 @X0 0 e@15 ]
+"655
+[v _TMR1L `Vuc ~T0 @X0 0 e@14 ]
+"311 timer.c
+[c E1781 3 1 0 .. ]
+[n E1781 . TMR2_PRESCALE_16 TMR2_PRESCALE_4 TMR2_PRESCALE_1  ]
+"90 timer.h
+[v _Timer2_Stop `(v ~T0 @X0 0 ef ]
+"763 C:\Program Files\Microchip\xc8\v1.44\include\pic16f887.h
+[v _TMR2 `Vuc ~T0 @X0 0 e@17 ]
+"4104
+[v _TMR2IF `Vb ~T0 @X0 0 e@97 ]
+"770
+[v _T2CON `Vuc ~T0 @X0 0 e@18 ]
+"91 timer.h
+[v _Timer2_Prescale `(v ~T0 @X0 0 ef ]
+"776 C:\Program Files\Microchip\xc8\v1.44\include\pic16f887.h
+[s S27 :2 `uc 1 :1 `uc 1 :4 `uc 1 ]
+[n S27 . T2CKPS TMR2ON TOUTPS ]
+"781
+[s S28 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S28 . T2CKPS0 T2CKPS1 . TOUTPS0 TOUTPS1 TOUTPS2 TOUTPS3 ]
+"775
+[u S26 `S27 1 `S28 1 ]
+[n S26 . . . ]
+"791
+[v _T2CONbits `VS26 ~T0 @X0 0 e@18 ]
+"4086
+[v _T2CKPS1 `Vb ~T0 @X0 0 e@145 ]
+"4084
+[v _T2CKPS0 `Vb ~T0 @X0 0 e@144 ]
 [; ;htc.h: 26: extern const char __xc8_OPTIM_SPEED;
 [; ;htc.h: 28: extern double __fpnormalize(double);
 [; ;xc8debug.h: 14: extern void __builtin_software_breakpoint(void);
@@ -1659,567 +1664,937 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;main.h: 176: DATA_IN_INVALID_FORMAT, DATA_IN_STR_FORMAT, DATA_IN_BINARY_FORMAT, DATA_IN_HEXA_FORMAT, DATA_IN_DECIMAL_FORMAT, DATA_IN_CHAR_FORMAT, DATA_IN_APPL_DEFINED_FORMAT
 [; ;main.h: 177: } data_format_types;
 [; ;main.h: 180: extern value_types to_disp;
-[; ;appl_conf.h: 22: typedef enum {
-[; ;appl_conf.h: 23: TMR1_STOP_STATE
-[; ;appl_conf.h: 24: } timer1_run_states;
-[; ;appl_conf.h: 26: typedef enum {
-[; ;appl_conf.h: 27: TMR2_STOP_STATE
-[; ;appl_conf.h: 28: } timer2_run_states;
-[; ;adc.h: 36: typedef enum {
-[; ;adc.h: 37: ADC_CH_00 = 0, ADC_CH_01, ADC_CH_02, ADC_CH_03, ADC_CH_04, ADC_CH_05, ADC_CH_06, ADC_CH_07, ADC_CH_08, ADC_CH_09, ADC_CH_10, ADC_CH_11, ADC_CH_12, ADC_CH_13, ADC_INVALID_CH_14
-[; ;adc.h: 38: } adc_channels;
-[; ;adc.h: 65: typedef struct {
-[; ;adc.h: 66: unsigned long adc_value_channel;
-[; ;adc.h: 67: unsigned int adc_cur_service_type: 2;
-[; ;adc.h: 68: unsigned int adc_clk_src_type: 2;
-[; ;adc.h: 69: unsigned int volt_ref: 1;
-[; ;adc.h: 70: unsigned int adc_result_format_justfied_type: 1;
-[; ;adc.h: 71: unsigned int adc_vref_neg_src_type: 1;
-[; ;adc.h: 72: unsigned int adc_vref_plus_src_type: 1;
-[; ;adc.h: 73: } adc_parameter_types;
-[; ;adc.h: 77: extern unsigned long analog_val_in_digital_ch[1];
-[; ;adc.h: 78: extern adc_parameter_types adc_cur_parameters[];
-[; ;adc.h: 79: extern adc_channels adc_cur_channel;
-[; ;adc.h: 81: void ADC_Start_Conv(adc_parameter_types *set_adc_conf);
-[; ;adc.h: 82: void ADC_Disable();
-[; ;adc.h: 83: char Is_ADC_Converting();
-[; ;adc.h: 84: void Encoded_To_Actual_Analog_Val_Calc(unsigned long adc_value, unsigned long int full_scale_analog_val,unsigned long int min_analog_val, unsigned long *const analog_val_in_digital_int, unsigned long *const analog_val_in_digital_frac );
-[; ;adc.h: 86: void Encoded_To_Percent_Calc(unsigned long adc_value, unsigned int *const percent_int, unsigned int *const percent_frac );
-[; ;adc.h: 87: void ADC_Conf_Channel(const adc_channels set_adc_cur_channel);
 [; ;uart.h: 23: void UART_Init();
 [; ;uart.h: 24: void UART_Transmit_Char(const char transmit_char);
 [; ;uart.h: 25: void UART_Transmit_Str(const char *transmit_str);
 [; ;uart.h: 26: char UART_Receive_Char();
 [; ;uart.h: 27: int UART_Receive_Str();
 [; ;uart.h: 28: void UART_Transmit_Num(const disp_num_types uart_datanum_disp_format, const value_types uart_disp_data_int);
-"21 adc.c
-[v _analog_val_in_digital_ch `ul ~T0 @X0 -> -> 1 `i `ux e ]
-[; ;adc.c: 21: unsigned long analog_val_in_digital_ch[1];
+[; ;appl_conf.h: 22: typedef enum {
+[; ;appl_conf.h: 23: TMR1_STOP_STATE
+[; ;appl_conf.h: 24: } timer1_run_states;
+[; ;appl_conf.h: 26: typedef enum {
+[; ;appl_conf.h: 27: TMR2_STOP_STATE
+[; ;appl_conf.h: 28: } timer2_run_states;
+[; ;timer.h: 27: typedef enum {
+[; ;timer.h: 28: TMR1_INVALID_SERVICE = 0x04, TMR1_TIMER_INTP_SERVICE = 0x03, TMR1_TIMER_POLLING_SERVICE = 0x02, TMR1_COUNTER_INTP_SERVICE = 0x01, TMR1_COUNTER_POLLING_SERVICE = 0x00
+[; ;timer.h: 29: } timer1_service_types;
+[; ;timer.h: 31: typedef enum {
+[; ;timer.h: 32: TMR1_GATE_CTRL_DISABLE = 0b00000000,
+[; ;timer.h: 33: TMR1_GATE_CTRL_ACTIVE_HIGH = 0b11000000,
+[; ;timer.h: 34: TMR1_GATE_CTRL_ACTIVE_LOW = 0b01000000
+[; ;timer.h: 35: } timer1_gate_control_types;
+[; ;timer.h: 37: typedef enum {
+[; ;timer.h: 38: TMR1_CLK_SRC_INTR_OSC = 0b00000000,
+[; ;timer.h: 39: TMR1_CLK_SRC_EXTR_SYNC = 0b00000010,
+[; ;timer.h: 40: TMR1_CLK_SRC_EXTR_NO_SYNC = 0b00000110
+[; ;timer.h: 41: } timer1_clock_sources;
+[; ;timer.h: 43: typedef enum {
+[; ;timer.h: 44: TMR1_LP_OSC_ENABLE = 0b00001000,
+[; ;timer.h: 45: TMR1_LP_OSC_DISABLE = 0b00000000
+[; ;timer.h: 46: } timer1_LP_osc_control_types;
+[; ;timer.h: 48: typedef enum {
+[; ;timer.h: 49: TMR1_INPUT_CLK_PRESCALE_8 = 0b00110000,
+[; ;timer.h: 50: TMR1_INPUT_CLK_PRESCALE_4 = 0b00100000,
+[; ;timer.h: 51: TMR1_INPUT_CLK_PRESCALE_2 = 0b00010000,
+[; ;timer.h: 52: TMR1_INPUT_CLK_PRESCALE_1 = 0b00000000
+[; ;timer.h: 53: } timer1_input_clock_prescaler_types;
+[; ;timer.h: 55: typedef enum {
+[; ;timer.h: 56: TMR2_INVALID_SERVICE = 0x04, TMR2_PWM_INTP_SERVICE = 0x03, TMR2_PWM_POLLING_SERVICE = 0x02
+[; ;timer.h: 57: } timer2_service_types;
+[; ;timer.h: 59: typedef enum {
+[; ;timer.h: 60: TMR2_PRESCALE_16 = 0b00000011,
+[; ;timer.h: 61: TMR2_PRESCALE_4 = 0b00000001,
+[; ;timer.h: 62: TMR2_PRESCALE_1 = 0b00000000
+[; ;timer.h: 63: } timer2_prescaler_types;
+[; ;timer.h: 67: extern unsigned int timer1_prescale, timer1_prescale_shift, timer1_elapsed_num_update;
+[; ;timer.h: 68: extern unsigned long int timer1_init_val, timer1_elapsed_num_overflow_1_update, timer1_1_update, timer1_max_num_overflow, timer1_req_time_max_update;
+[; ;timer.h: 69: extern unsigned long int timer1_req_time_delay_in_milli_sec;
+[; ;timer.h: 70: extern timer1_run_states timer1_cur_run_state, timer1_last_run_state_before_stop;
+[; ;timer.h: 71: extern timer1_service_types timer1_cur_service_type;
+[; ;timer.h: 72: extern volatile unsigned long measure_pulse_lower_count, measure_pulse_upper_count;
+[; ;timer.h: 74: extern unsigned int timer2_prescale, timer2_prescale_shift, timer2_elapsed_num_update;
+[; ;timer.h: 75: extern unsigned long int timer2_init_val, timer2_elapsed_num_overflow_1_update, timer2_1_update, timer2_max_num_overflow, timer2_req_time_max_update;
+[; ;timer.h: 76: extern unsigned long int timer2_req_time_delay_in_milli_sec;
+[; ;timer.h: 77: extern timer2_run_states timer2_cur_run_state, timer2_last_run_state_before_stop;
+[; ;timer.h: 78: extern timer2_service_types timer2_cur_service_type;
+[; ;timer.h: 82: void Timer1_Run(const timer1_run_states set_timer1_run_mode, const unsigned long int set_req_time_delay_in_milli_sec, const timer1_service_types set_timer1_service, const timer1_gate_control_types set_gate_control_type, const timer1_input_clock_presc
+[; ;timer.h: 84: void Timer1_Stop();
+[; ;timer.h: 85: void Timer1_Prescale();
+[; ;timer.h: 86: void Timer1_Load_Init_Val_Calc(const unsigned long int set_timer1_tick_in_milli_sec);
+[; ;timer.h: 88: void Timer2_Run(const timer2_run_states set_timer2_run_mode, const unsigned long int set_req_time_delay_in_milli_sec, const timer2_service_types set_timer2_service, const timer2_prescaler_types set_timer2_input_clock_prescaler_type, const unsigned in
+[; ;timer.h: 90: void Timer2_Stop();
+[; ;timer.h: 91: void Timer2_Prescale();
+[; ;timer.h: 92: void Timer2_Load_Init_Val_Calc(const unsigned long int set_timer2_tick_in_milli_sec);
+"20 timer.c
+[v _timer1_prescale `ui ~T0 @X0 1 e ]
+[i _timer1_prescale
+-> -> 1 `i `ui
+]
+[v _timer1_prescale_shift `ui ~T0 @X0 1 e ]
+[i _timer1_prescale_shift
+-> -> 0 `i `ui
+]
+[v _timer1_elapsed_num_update `ui ~T0 @X0 1 e ]
+[i _timer1_elapsed_num_update
+-> -> 0 `i `ui
+]
+[; ;timer.c: 20: unsigned int timer1_prescale = 1, timer1_prescale_shift= 0, timer1_elapsed_num_update = 0 ;
+"21
+[v _timer1_init_val `ul ~T0 @X0 1 e ]
+[i _timer1_init_val
+-> -> -> 0 `i `l `ul
+]
+[v _timer1_elapsed_num_overflow_1_update `ul ~T0 @X0 1 e ]
+[i _timer1_elapsed_num_overflow_1_update
+-> -> -> 0 `i `l `ul
+]
+[v _timer1_1_update `ul ~T0 @X0 1 e ]
+[i _timer1_1_update
+-> -> -> 0 `i `l `ul
+]
+[v _timer1_max_num_overflow `ul ~T0 @X0 1 e ]
+[i _timer1_max_num_overflow
+-> -> -> 0 `i `l `ul
+]
+[v _timer1_req_time_max_update `ul ~T0 @X0 1 e ]
+[i _timer1_req_time_max_update
+-> -> -> 0 `i `l `ul
+]
+[; ;timer.c: 21: unsigned long int timer1_init_val = 0, timer1_elapsed_num_overflow_1_update = 0, timer1_1_update = 0, timer1_max_num_overflow =0, timer1_req_time_max_update = 0;
 "22
-[v _adc_cur_parameters `S145 ~T0 @X0 -> -> 1 `i `ux e ]
-[; ;adc.c: 22: adc_parameter_types adc_cur_parameters[1];
+[v _timer1_cur_run_state `E1743 ~T0 @X0 1 e ]
+[i _timer1_cur_run_state
+. `E1743 0
+]
+[v _timer1_last_run_state_before_stop `E1743 ~T0 @X0 1 e ]
+[i _timer1_last_run_state_before_stop
+. `E1743 0
+]
+[; ;timer.c: 22: timer1_run_states timer1_cur_run_state= TMR1_STOP_STATE, timer1_last_run_state_before_stop = TMR1_STOP_STATE;
 "23
-[v _adc_cur_channel `E1739 ~T0 @X0 1 e ]
-[; ;adc.c: 23: adc_channels adc_cur_channel;
-"37
-[v _ADC_Conf_Channel `(v ~T0 @X0 1 ef1`CE1739 ]
-"38
-{
-[; ;adc.c: 37: void ADC_Conf_Channel(const adc_channels set_adc_cur_channel)
-[; ;adc.c: 38: {
-[e :U _ADC_Conf_Channel ]
-"37
-[v _set_adc_cur_channel `CE1739 ~T0 @X0 1 r1 ]
-"38
-[f ]
-[; ;adc.c: 39: if(set_adc_cur_channel <= ADC_CH_13)
-"39
-[e $ ! <= -> _set_adc_cur_channel `i -> . `E1739 13 `i 147  ]
-[; ;adc.c: 40: {
-"40
-{
-[; ;adc.c: 41: adc_cur_channel = set_adc_cur_channel;
-"41
-[e = _adc_cur_channel _set_adc_cur_channel ]
-[; ;adc.c: 42: adc_cur_parameters[adc_cur_channel].adc_cur_service_type = (0x00);
-"42
-[e = . *U + &U _adc_cur_parameters * -> _adc_cur_channel `ux -> -> # *U &U _adc_cur_parameters `ui `ux 1 -> -> 0 `i `uc ]
-[; ;adc.c: 43: adc_cur_parameters[adc_cur_channel].adc_clk_src_type = (2u);
-"43
-[e = . *U + &U _adc_cur_parameters * -> _adc_cur_channel `ux -> -> # *U &U _adc_cur_parameters `ui `ux 2 -> -> 2 `ui `uc ]
-[; ;adc.c: 44: adc_cur_parameters[adc_cur_channel].adc_result_format_justfied_type = (1u);
-"44
-[e = . *U + &U _adc_cur_parameters * -> _adc_cur_channel `ux -> -> # *U &U _adc_cur_parameters `ui `ux 4 -> -> 1 `ui `uc ]
-[; ;adc.c: 45: adc_cur_parameters[adc_cur_channel].adc_vref_neg_src_type = (0u);
-"45
-[e = . *U + &U _adc_cur_parameters * -> _adc_cur_channel `ux -> -> # *U &U _adc_cur_parameters `ui `ux 5 -> -> 0 `ui `uc ]
-[; ;adc.c: 46: adc_cur_parameters[adc_cur_channel].adc_vref_plus_src_type = (0u);
+[v _timer1_req_time_delay_in_milli_sec `ul ~T0 @X0 1 e ]
+[; ;timer.c: 23: unsigned long int timer1_req_time_delay_in_milli_sec;
+"24
+[v _timer1_cur_service_type `E1749 ~T0 @X0 1 e ]
+[; ;timer.c: 24: timer1_service_types timer1_cur_service_type;
+"25
+[v _measure_pulse_lower_count `Vul ~T0 @X0 1 e ]
+[v _measure_pulse_upper_count `Vul ~T0 @X0 1 e ]
+[; ;timer.c: 25: volatile unsigned long measure_pulse_lower_count, measure_pulse_upper_count;
+"27
+[v _timer2_prescale `ui ~T0 @X0 1 e ]
+[i _timer2_prescale
+-> -> 1 `i `ui
+]
+[v _timer2_prescale_shift `ui ~T0 @X0 1 e ]
+[i _timer2_prescale_shift
+-> -> 0 `i `ui
+]
+[v _timer2_elapsed_num_update `ui ~T0 @X0 1 e ]
+[i _timer2_elapsed_num_update
+-> -> 0 `i `ui
+]
+[; ;timer.c: 27: unsigned int timer2_prescale = 1, timer2_prescale_shift= 0, timer2_elapsed_num_update = 0 ;
+"28
+[v _timer2_init_val `ul ~T0 @X0 1 e ]
+[i _timer2_init_val
+-> -> -> 0 `i `l `ul
+]
+[v _timer2_elapsed_num_overflow_1_update `ul ~T0 @X0 1 e ]
+[i _timer2_elapsed_num_overflow_1_update
+-> -> -> 0 `i `l `ul
+]
+[v _timer2_1_update `ul ~T0 @X0 1 e ]
+[i _timer2_1_update
+-> -> -> 0 `i `l `ul
+]
+[v _timer2_max_num_overflow `ul ~T0 @X0 1 e ]
+[i _timer2_max_num_overflow
+-> -> -> 0 `i `l `ul
+]
+[v _timer2_req_time_max_update `ul ~T0 @X0 1 e ]
+[i _timer2_req_time_max_update
+-> -> -> 0 `i `l `ul
+]
+[; ;timer.c: 28: unsigned long int timer2_init_val = 0, timer2_elapsed_num_overflow_1_update = 0, timer2_1_update = 0, timer2_max_num_overflow =0, timer2_req_time_max_update = 0;
+"29
+[v _timer2_cur_run_state `E1746 ~T0 @X0 1 e ]
+[i _timer2_cur_run_state
+. `E1746 0
+]
+[v _timer2_last_run_state_before_stop `E1746 ~T0 @X0 1 e ]
+[i _timer2_last_run_state_before_stop
+. `E1746 0
+]
+[; ;timer.c: 29: timer2_run_states timer2_cur_run_state= TMR2_STOP_STATE, timer2_last_run_state_before_stop = TMR2_STOP_STATE;
+"30
+[v _timer2_req_time_delay_in_milli_sec `ul ~T0 @X0 1 e ]
+[; ;timer.c: 30: unsigned long int timer2_req_time_delay_in_milli_sec;
+"31
+[v _timer2_cur_service_type `E1776 ~T0 @X0 1 e ]
+[; ;timer.c: 31: timer2_service_types timer2_cur_service_type;
 "46
-[e = . *U + &U _adc_cur_parameters * -> _adc_cur_channel `ux -> -> # *U &U _adc_cur_parameters `ui `ux 6 -> -> 0 `ui `uc ]
-"47
-}
-[e :U 147 ]
-[; ;adc.c: 47: }
-[; ;adc.c: 48: }
+[v _Timer1_Run `(v ~T0 @X0 1 ef7`CE1743`Cul`CE1749`CE1756`CE1770`CE1766`CE1761 ]
 "48
-[e :UE 146 ]
-}
-"62
-[v _ADC_Start_Conv `(v ~T0 @X0 1 ef1`*S145 ]
-"63
 {
-[; ;adc.c: 62: void ADC_Start_Conv(adc_parameter_types *set_adc_parameters )
-[; ;adc.c: 63: {
-[e :U _ADC_Start_Conv ]
-"62
-[v _set_adc_parameters `*S145 ~T0 @X0 1 r1 ]
-"63
+[; ;timer.c: 46: void Timer1_Run(const timer1_run_states set_timer1_run_mode, const unsigned long int set_req_time_delay_in_milli_sec, const timer1_service_types set_timer1_service, const timer1_gate_control_types set_gate_control_type, const timer1_input_clock_presc
+[; ;timer.c: 48: {
+[e :U _Timer1_Run ]
+"46
+[v _set_timer1_run_mode `CE1743 ~T0 @X0 1 r1 ]
+[v _set_req_time_delay_in_milli_sec `Cul ~T0 @X0 1 r2 ]
+[v _set_timer1_service `CE1749 ~T0 @X0 1 r3 ]
+[v _set_gate_control_type `CE1756 ~T0 @X0 1 r4 ]
+[v _set_timer1_input_clock_prescaler_type `CE1770 ~T0 @X0 1 r5 ]
+[v _set_timer1_LP_osc_control_type `CE1766 ~T0 @X0 1 r6 ]
+[v _set_timer1_clock_source `CE1761 ~T0 @X0 1 r7 ]
+"48
 [f ]
-"64
-[v _rcvd_status `uc ~T0 @X0 1 a ]
-"65
-[v _adc_value_least_byte `ui ~T0 @X0 1 a ]
-[v _adc_value_most_byte `ui ~T0 @X0 1 a ]
-[; ;adc.c: 64: char rcvd_status;
-[; ;adc.c: 65: unsigned adc_value_least_byte, adc_value_most_byte;
-[; ;adc.c: 67: rcvd_status = Is_ADC_Converting();
+[; ;timer.c: 49: Timer1_Stop();
+"49
+[e ( _Timer1_Stop ..  ]
+[; ;timer.c: 51: if(set_timer1_service & 0x04)
+"51
+[e $ ! != & -> _set_timer1_service `i -> 4 `i -> 0 `i 146  ]
+[; ;timer.c: 52: {
+"52
+{
+[; ;timer.c: 54: return;
+"54
+[e $UE 145  ]
+"55
+}
+[e :U 146 ]
+[; ;timer.c: 55: }
+[; ;timer.c: 56: timer1_cur_run_state = timer1_last_run_state_before_stop = set_timer1_run_mode;
+"56
+[e = _timer1_cur_run_state = _timer1_last_run_state_before_stop _set_timer1_run_mode ]
+[; ;timer.c: 57: T1CON = set_gate_control_type | set_timer1_clock_source | set_timer1_LP_osc_control_type | set_timer1_input_clock_prescaler_type;
+"57
+[e = _T1CON -> | | | -> _set_gate_control_type `i -> _set_timer1_clock_source `i -> _set_timer1_LP_osc_control_type `i -> _set_timer1_input_clock_prescaler_type `i `uc ]
+[; ;timer.c: 58: Timer1_Prescale();
+"58
+[e ( _Timer1_Prescale ..  ]
+[; ;timer.c: 67: timer1_cur_service_type = set_timer1_service;
 "67
-[e = _rcvd_status ( _Is_ADC_Converting ..  ]
-[; ;adc.c: 68: switch(rcvd_status)
-"68
-[e $U 150  ]
-[; ;adc.c: 69: {
+[e = _timer1_cur_service_type _set_timer1_service ]
+[; ;timer.c: 69: if(timer1_cur_service_type & 0x02)
 "69
+[e $ ! != & -> _timer1_cur_service_type `i -> 2 `i -> 0 `i 147  ]
+[; ;timer.c: 70: {
+"70
 {
-[; ;adc.c: 71: case ('n'):
-"71
-[e :U 151 ]
-[; ;adc.c: 73: if(adc_cur_channel != ADC_INVALID_CH_14 )
+[; ;timer.c: 72: if((set_timer1_clock_source & 0x02) | (T1CON & 0x02) == 0x00)
+"72
+[e $ ! != | & -> _set_timer1_clock_source `i -> 2 `i -> == & -> _T1CON `i -> 2 `i -> 0 `i `i -> 0 `i 148  ]
+[; ;timer.c: 73: {
 "73
-[e $ ! != -> _adc_cur_channel `i -> . `E1739 14 `i 152  ]
-[; ;adc.c: 74: {
-"74
 {
-[; ;adc.c: 75: if(adc_cur_channel < 14)
-"75
-[e $ ! < -> _adc_cur_channel `i -> 14 `i 153  ]
-[; ;adc.c: 76: {
-"76
-{
-[; ;adc.c: 77: ADCON0 = (set_adc_parameters->adc_clk_src_type <<6) | (adc_cur_channel << 2) ;
-"77
-[e = _ADCON0 -> | << -> . *U _set_adc_parameters 2 `i -> 6 `i << -> _adc_cur_channel `i -> 2 `i `uc ]
-[; ;adc.c: 78: ADCON1 = (set_adc_parameters->adc_result_format_justfied_type<<7) | (set_adc_parameters->adc_vref_neg_src_type << 5) | (set_adc_parameters->adc_vref_plus_src_type<<4);
-"78
-[e = _ADCON1 -> | | << -> . *U _set_adc_parameters 4 `i -> 7 `i << -> . *U _set_adc_parameters 5 `i -> 5 `i << -> . *U _set_adc_parameters 6 `i -> 4 `i `uc ]
-[; ;adc.c: 80: ADCON0bits.ADON = 1;
+[; ;timer.c: 80: Timer1_Load_Init_Val_Calc(set_req_time_delay_in_milli_sec);
 "80
-[e = . . _ADCON0bits 0 0 -> -> 1 `i `uc ]
-[; ;adc.c: 81: ADIF = 0;
+[e ( _Timer1_Load_Init_Val_Calc (1 _set_req_time_delay_in_milli_sec ]
 "81
-[e = _ADIF -> -> 0 `i `b ]
-[; ;adc.c: 82: switch(set_adc_parameters->adc_cur_service_type)
+}
+[; ;timer.c: 81: }
+[e $U 149  ]
 "82
-[e $U 155  ]
-[; ;adc.c: 83: {
+[e :U 148 ]
+[; ;timer.c: 82: else
+[; ;timer.c: 83: {
 "83
 {
-[; ;adc.c: 84: case (0x01):
-"84
-[e :U 156 ]
-[; ;adc.c: 85: PIE1bits.ADIE = 1;
+[; ;timer.c: 85: UART_Transmit_Str("ERR: tmr1 is timer but clk source is not internal \r");
 "85
-[e = . . _PIE1bits 0 6 -> -> 1 `i `uc ]
-[; ;adc.c: 86: INTCONbits.PEIE = 1;
-"86
-[e = . . _INTCONbits 0 6 -> -> 1 `i `uc ]
-[; ;adc.c: 87: INTCONbits.GIE = 1;
-"87
-[e = . . _INTCONbits 0 7 -> -> 1 `i `uc ]
-[; ;adc.c: 93: break;
-"93
-[e $U 154  ]
-[; ;adc.c: 94: case (0x00):
-"94
-[e :U 157 ]
-[; ;adc.c: 95: PIE1bits.ADIE = 0;
-"95
-[e = . . _PIE1bits 0 6 -> -> 0 `i `uc ]
-[; ;adc.c: 100: break;
-"100
-[e $U 154  ]
-"101
-}
-[; ;adc.c: 101: }
-[e $U 154  ]
-"82
-[e :U 155 ]
-[e [\ . *U _set_adc_parameters 1 , $ -> -> 1 `i `uc 156
- , $ -> -> 0 `i `uc 157
- 154 ]
-"101
-[e :U 154 ]
-[; ;adc.c: 121: _delay((unsigned long)((20)*((20000000)/4000000.0)));
-"121
-[e ( __delay (1 -> * -> -> 20 `i `d / -> -> 20000000 `l `d .4000000.0 `ul ]
-[; ;adc.c: 124: ADCON0bits.GO = 1;
-"124
-[e = . . _ADCON0bits 1 1 -> -> 1 `i `uc ]
-[; ;adc.c: 125: switch(set_adc_parameters->adc_cur_service_type)
-"125
-[e $U 159  ]
-[; ;adc.c: 126: {
-"126
-{
-[; ;adc.c: 127: case (0x00):
-"127
-[e :U 160 ]
-[; ;adc.c: 128: while(GO == 1);
-"128
-[e $U 161  ]
-[e :U 162 ]
-[e :U 161 ]
-[e $ == -> _GO `i -> 1 `i 162  ]
-[e :U 163 ]
-[; ;adc.c: 130: ADIF = 0;
-"130
-[e = _ADIF -> -> 0 `i `b ]
-[; ;adc.c: 132: if(ADFM == 1)
-"132
-[e $ ! == -> _ADFM `i -> 1 `i 164  ]
-[; ;adc.c: 133: {
-"133
-{
-[; ;adc.c: 134: adc_value_least_byte = ADRESL;
-"134
-[e = _adc_value_least_byte -> _ADRESL `ui ]
-[; ;adc.c: 135: adc_value_most_byte = ADRESH & 0x03u;
-"135
-[e = _adc_value_most_byte & -> _ADRESH `ui -> 3 `ui ]
-[; ;adc.c: 136: adc_value_most_byte <<= 8;
-"136
-[e =<< _adc_value_most_byte -> 8 `i ]
-[; ;adc.c: 137: set_adc_parameters->adc_value_channel = (adc_value_most_byte) | adc_value_least_byte;
-"137
-[e = . *U _set_adc_parameters 0 -> | _adc_value_most_byte _adc_value_least_byte `ul ]
-"138
-}
-[; ;adc.c: 138: }
-[e $U 165  ]
-"139
-[e :U 164 ]
-[; ;adc.c: 139: else
-[; ;adc.c: 140: {
-"140
-{
-[; ;adc.c: 141: adc_value_least_byte = ADRESL & 0xC0;
-"141
-[e = _adc_value_least_byte -> & -> _ADRESL `i -> 192 `i `ui ]
-[; ;adc.c: 142: adc_value_most_byte = ADRESH ;
-"142
-[e = _adc_value_most_byte -> _ADRESH `ui ]
-[; ;adc.c: 143: adc_value_most_byte <<= 8;
-"143
-[e =<< _adc_value_most_byte -> 8 `i ]
-[; ;adc.c: 144: set_adc_parameters->adc_value_channel = adc_value_most_byte | adc_value_least_byte;
-"144
-[e = . *U _set_adc_parameters 0 -> | _adc_value_most_byte _adc_value_least_byte `ul ]
-[; ;adc.c: 145: set_adc_parameters->adc_value_channel >>= 6;
-"145
-[e =>> . *U _set_adc_parameters 0 -> 6 `i ]
-"146
-}
-[e :U 165 ]
-[; ;adc.c: 146: }
-[; ;adc.c: 150: break;
-"150
-[e $U 158  ]
-"151
-}
-[; ;adc.c: 151: }
-[e $U 158  ]
-"125
-[e :U 159 ]
-[e [\ . *U _set_adc_parameters 1 , $ -> -> 0 `i `uc 160
- 158 ]
-"151
-[e :U 158 ]
-"152
-}
-[; ;adc.c: 152: }
-[e $U 166  ]
-"153
-[e :U 153 ]
-[; ;adc.c: 153: else
-[; ;adc.c: 154: {
-"154
-{
-[; ;adc.c: 156: to_disp.signed_val.val_in_bytes.value_byte[0] = adc_cur_channel;
-"156
-[e = *U + &U . . . _to_disp 1 1 0 * -> -> -> 0 `i `ui `ux -> -> # *U &U . . . _to_disp 1 1 0 `ui `ux -> _adc_cur_channel `i ]
-[; ;adc.c: 157: UART_Transmit_Str("ERR: invalid ADC channel select : ");
-"157
 [e ( _UART_Transmit_Str (1 :s 1C ]
-[; ;adc.c: 158: UART_Transmit_Num(DISP_SIGN_NUM_DIGIT2, to_disp );
-"158
-[e ( _UART_Transmit_Num (2 , . `E1694 6 _to_disp ]
-[; ;adc.c: 159: UART_Transmit_Char(('\r'));
-"159
-[e ( _UART_Transmit_Char (1 -> -> 13 `ui `uc ]
-"161
+[; ;timer.c: 88: timer1_cur_service_type = TMR1_INVALID_SERVICE;
+"88
+[e = _timer1_cur_service_type . `E1749 0 ]
+[; ;timer.c: 89: return;
+"89
+[e $UE 145  ]
+"90
 }
-[e :U 166 ]
-"162
+[e :U 149 ]
+"91
 }
-[; ;adc.c: 161: }
-[; ;adc.c: 162: }
-[e $U 167  ]
-"163
-[e :U 152 ]
-[; ;adc.c: 163: else
-[; ;adc.c: 164: {
-"164
+[; ;timer.c: 90: }
+[; ;timer.c: 91: }
+[e $U 150  ]
+"92
+[e :U 147 ]
+[; ;timer.c: 92: else
+[; ;timer.c: 93: {
+"93
 {
-[; ;adc.c: 165: ADCON0 = (set_adc_parameters->adc_clk_src_type << 6)| (7 << 3) | (set_adc_parameters->volt_ref << 2) ;
-"165
-[e = _ADCON0 -> | | << -> . *U _set_adc_parameters 2 `i -> 6 `i << -> 7 `i -> 3 `i << -> . *U _set_adc_parameters 3 `i -> 2 `i `uc ]
-"166
+[; ;timer.c: 95: if((set_timer1_clock_source & 0x02) & (T1CON & 0x02))
+"95
+[e $ ! != & & -> _set_timer1_clock_source `i -> 2 `i & -> _T1CON `i -> 2 `i -> 0 `i 151  ]
+[; ;timer.c: 96: {
+"96
+{
+[; ;timer.c: 98: if(set_timer1_LP_osc_control_type & 0x08)
+"98
+[e $ ! != & -> _set_timer1_LP_osc_control_type `i -> 8 `i -> 0 `i 152  ]
+[; ;timer.c: 99: {
+"99
+{
+[; ;timer.c: 100: TMR1 = measure_pulse_lower_count;
+"100
+[e = _TMR1 -> _measure_pulse_lower_count `us ]
+"109
+}
+[; ;timer.c: 109: }
+[e $U 153  ]
+"110
+[e :U 152 ]
+[; ;timer.c: 110: else
+[; ;timer.c: 111: {
+"111
+{
+[; ;timer.c: 113: UART_Transmit_Str("ERR: tmr1 is counter but LP osc is disabled \r");
+"113
+[e ( _UART_Transmit_Str (1 :s 2C ]
+[; ;timer.c: 116: timer1_cur_service_type = TMR1_INVALID_SERVICE;
+"116
+[e = _timer1_cur_service_type . `E1749 0 ]
+[; ;timer.c: 117: return;
+"117
+[e $UE 145  ]
+"118
+}
+[e :U 153 ]
+"119
+}
+[; ;timer.c: 118: }
+[; ;timer.c: 119: }
+[e $U 154  ]
+"120
+[e :U 151 ]
+[; ;timer.c: 120: else
+[; ;timer.c: 121: {
+"121
+{
+[; ;timer.c: 123: UART_Transmit_Str("ERR: tmr1 is counter but clk source is not external \r");
+"123
+[e ( _UART_Transmit_Str (1 :s 3C ]
+[; ;timer.c: 126: timer1_cur_service_type = TMR1_INVALID_SERVICE;
+"126
+[e = _timer1_cur_service_type . `E1749 0 ]
+[; ;timer.c: 127: return;
+"127
+[e $UE 145  ]
+"128
+}
+[e :U 154 ]
+"129
+}
+[e :U 150 ]
+[; ;timer.c: 128: }
+[; ;timer.c: 129: }
+[; ;timer.c: 131: if(timer1_cur_service_type & 0x01)
+"131
+[e $ ! != & -> _timer1_cur_service_type `i -> 1 `i -> 0 `i 155  ]
+[; ;timer.c: 132: {
+"132
+{
+[; ;timer.c: 134: TMR1IF = 0;
+"134
+[e = _TMR1IF -> -> 0 `i `b ]
+[; ;timer.c: 135: PIE1bits.TMR1IE = 1;
+"135
+[e = . . _PIE1bits 0 0 -> -> 1 `i `uc ]
+[; ;timer.c: 136: INTCONbits.PEIE = 1;
+"136
+[e = . . _INTCONbits 0 6 -> -> 1 `i `uc ]
+[; ;timer.c: 137: INTCONbits.GIE = 1;
+"137
+[e = . . _INTCONbits 0 7 -> -> 1 `i `uc ]
+"142
+}
+[; ;timer.c: 142: }
+[e $U 156  ]
+"143
+[e :U 155 ]
+[; ;timer.c: 143: else
+[; ;timer.c: 144: {
+"144
+{
+[; ;timer.c: 146: PIE1bits.TMR1IE = 0;
+"146
+[e = . . _PIE1bits 0 0 -> -> 0 `i `uc ]
+"151
+}
+[e :U 156 ]
+[; ;timer.c: 151: }
+[; ;timer.c: 153: TMR1IF = 0;
+"153
+[e = _TMR1IF -> -> 0 `i `b ]
+[; ;timer.c: 154: T1CONbits.TMR1ON = 1 ;
+"154
+[e = . . _T1CONbits 0 0 -> -> 1 `i `uc ]
+[; ;timer.c: 155: }
+"155
+[e :UE 145 ]
+}
+"169
+[v _Timer1_Stop `(v ~T0 @X0 1 ef ]
+"170
+{
+[; ;timer.c: 169: void Timer1_Stop()
+[; ;timer.c: 170: {
+[e :U _Timer1_Stop ]
+[f ]
+[; ;timer.c: 172: {
+"172
+{
+[; ;timer.c: 173: T1CONbits.TMR1ON = 0 ;
+"173
+[e = . . _T1CONbits 0 0 -> -> 0 `i `uc ]
+[; ;timer.c: 174: PIE1bits.TMR1IE = 0;
+"174
+[e = . . _PIE1bits 0 0 -> -> 0 `i `uc ]
+[; ;timer.c: 175: TMR1IF = 0;
+"175
+[e = _TMR1IF -> -> 0 `i `b ]
+[; ;timer.c: 176: timer1_cur_run_state = TMR1_STOP_STATE;
+"176
+[e = _timer1_cur_run_state . `E1743 0 ]
+[; ;timer.c: 177: timer1_cur_service_type = TMR1_INVALID_SERVICE;
+"177
+[e = _timer1_cur_service_type . `E1749 0 ]
+"183
+}
+[; ;timer.c: 183: }
+[; ;timer.c: 184: }
+"184
+[e :UE 157 ]
+}
+"198
+[v _Timer1_Prescale `(v ~T0 @X0 1 ef ]
+"199
+{
+[; ;timer.c: 198: void Timer1_Prescale()
+[; ;timer.c: 199: {
+[e :U _Timer1_Prescale ]
+[f ]
+"200
+[v _i `ui ~T0 @X0 1 a ]
+[; ;timer.c: 200: unsigned int i;
+[; ;timer.c: 202: timer1_prescale = 1;
+"202
+[e = _timer1_prescale -> -> 1 `i `ui ]
+[; ;timer.c: 203: timer1_prescale_shift= 0;
+"203
+[e = _timer1_prescale_shift -> -> 0 `i `ui ]
+[; ;timer.c: 204: if(T1CKPS0 == 1)
+"204
+[e $ ! == -> _T1CKPS0 `i -> 1 `i 159  ]
+[; ;timer.c: 205: {
+"205
+{
+[; ;timer.c: 206: timer1_prescale_shift |= 0x01;
+"206
+[e =| _timer1_prescale_shift -> -> 1 `i `ui ]
+"207
+}
+[e :U 159 ]
+[; ;timer.c: 207: }
+[; ;timer.c: 208: if(T1CKPS1 == 1)
+"208
+[e $ ! == -> _T1CKPS1 `i -> 1 `i 160  ]
+[; ;timer.c: 209: {
+"209
+{
+[; ;timer.c: 210: timer1_prescale_shift |= 0x02;
+"210
+[e =| _timer1_prescale_shift -> -> 2 `i `ui ]
+"211
+}
+[e :U 160 ]
+[; ;timer.c: 211: }
+[; ;timer.c: 212: for(i = 1; i <= timer1_prescale_shift; ++i)
+"212
+{
+[e = _i -> -> 1 `i `ui ]
+[e $U 164  ]
+"213
+[e :U 161 ]
+[; ;timer.c: 213: {
+{
+[; ;timer.c: 214: timer1_prescale *= 2;
+"214
+[e =* _timer1_prescale -> -> 2 `i `ui ]
+"215
+}
+"212
+[e =+ _i -> -> 1 `i `ui ]
+[e :U 164 ]
+[e $ <= _i _timer1_prescale_shift 161  ]
+[e :U 162 ]
+"215
+}
+[; ;timer.c: 215: }
+[; ;timer.c: 216: }
+"216
+[e :UE 158 ]
+}
+"233
+[v _Timer1_Load_Init_Val_Calc `(v ~T0 @X0 1 ef1`Cul ]
+"234
+{
+[; ;timer.c: 233: void Timer1_Load_Init_Val_Calc(const unsigned long int set_req_time_delay_in_milli_sec)
+[; ;timer.c: 234: {
+[e :U _Timer1_Load_Init_Val_Calc ]
+"233
+[v _set_req_time_delay_in_milli_sec `Cul ~T0 @X0 1 r1 ]
+"234
+[f ]
+"235
+[v _inc_timer1 `ul ~T0 @X0 1 a ]
+"236
+[v _timer1_adjust_init_val `ui ~T0 @X0 1 a ]
+"237
+[v _set_timer1_tick_in_milli_sec `ul ~T0 @X0 1 a ]
+[; ;timer.c: 235: unsigned long int inc_timer1;
+[; ;timer.c: 236: unsigned int timer1_adjust_init_val;
+[; ;timer.c: 237: unsigned long int set_timer1_tick_in_milli_sec = (50U);
+[e = _set_timer1_tick_in_milli_sec -> -> 50 `ui `ul ]
+"238
+[v _set_timer1_req_time_1_update_in_milli_sec `ul ~T0 @X0 1 a ]
+[; ;timer.c: 238: unsigned long int set_timer1_req_time_1_update_in_milli_sec = (1000UL);
+[e = _set_timer1_req_time_1_update_in_milli_sec -> 1000 `ul ]
+"239
+[v _timer1_remainder `ul ~T0 @X0 1 a ]
+[; ;timer.c: 239: unsigned long int timer1_remainder;
+[; ;timer.c: 248: timer1_elapsed_num_overflow_1_update = 0;
+"248
+[e = _timer1_elapsed_num_overflow_1_update -> -> -> 0 `i `l `ul ]
+[; ;timer.c: 249: timer1_1_update = set_timer1_req_time_1_update_in_milli_sec /set_timer1_tick_in_milli_sec;
+"249
+[e = _timer1_1_update / _set_timer1_req_time_1_update_in_milli_sec _set_timer1_tick_in_milli_sec ]
+[; ;timer.c: 250: timer1_remainder = set_req_time_delay_in_milli_sec % set_timer1_req_time_1_update_in_milli_sec;
+"250
+[e = _timer1_remainder % _set_req_time_delay_in_milli_sec _set_timer1_req_time_1_update_in_milli_sec ]
+[; ;timer.c: 251: if( timer1_remainder == 0)
+"251
+[e $ ! == _timer1_remainder -> -> -> 0 `i `l `ul 166  ]
+[; ;timer.c: 252: {
+"252
+{
+[; ;timer.c: 254: timer1_req_time_delay_in_milli_sec = set_req_time_delay_in_milli_sec;
+"254
+[e = _timer1_req_time_delay_in_milli_sec _set_req_time_delay_in_milli_sec ]
+"255
+}
+[; ;timer.c: 255: }
+[e $U 167  ]
+"256
+[e :U 166 ]
+[; ;timer.c: 256: else
+[; ;timer.c: 257: {
+"257
+{
+[; ;timer.c: 261: timer1_req_time_delay_in_milli_sec = set_req_time_delay_in_milli_sec - timer1_remainder;
+"261
+[e = _timer1_req_time_delay_in_milli_sec - _set_req_time_delay_in_milli_sec _timer1_remainder ]
+"266
 }
 [e :U 167 ]
-[; ;adc.c: 166: }
-[; ;adc.c: 167: break;
-"167
-[e $U 149  ]
-[; ;adc.c: 168: default:
-"168
-[e :U 168 ]
-[; ;adc.c: 171: UART_Transmit_Str("ERR: try to start ADC while ADC Converting \r");
-"171
-[e ( _UART_Transmit_Str (1 :s 2C ]
-"173
-}
-[; ;adc.c: 173: }
-[e $U 149  ]
-"68
-[e :U 150 ]
-[e [\ _rcvd_status , $ -> -> 110 `ui `uc 151
- 168 ]
-"173
-[e :U 149 ]
-[; ;adc.c: 175: }
-"175
-[e :UE 148 ]
-}
-"189
-[v _ADC_Disable `(v ~T0 @X0 1 ef ]
-"190
-{
-[; ;adc.c: 189: void ADC_Disable()
-[; ;adc.c: 190: {
-[e :U _ADC_Disable ]
-[f ]
-"191
-[v _rcvd_status `uc ~T0 @X0 1 a ]
-[; ;adc.c: 191: char rcvd_status;
-[; ;adc.c: 193: rcvd_status = Is_ADC_Converting();
-"193
-[e = _rcvd_status ( _Is_ADC_Converting ..  ]
-[; ;adc.c: 194: switch(rcvd_status)
-"194
-[e $U 171  ]
-[; ;adc.c: 195: {
-"195
-{
-[; ;adc.c: 197: case ('n'):
-"197
-[e :U 172 ]
-[; ;adc.c: 199: ADCON0bits.ADON = 0;
-"199
-[e = . . _ADCON0bits 0 0 -> -> 0 `i `uc ]
-[; ;adc.c: 200: PIE1bits.ADIE = 0;
-"200
-[e = . . _PIE1bits 0 6 -> -> 0 `i `uc ]
-[; ;adc.c: 201: adc_cur_parameters[adc_cur_channel].adc_cur_service_type = (0x02);
-"201
-[e = . *U + &U _adc_cur_parameters * -> _adc_cur_channel `ux -> -> # *U &U _adc_cur_parameters `ui `ux 1 -> -> 2 `i `uc ]
-[; ;adc.c: 208: break;
-"208
-[e $U 170  ]
-[; ;adc.c: 209: default:
-"209
-[e :U 173 ]
-[; ;adc.c: 212: UART_Transmit_Str("ERR: try to disable ADC while ADC Converting \r");
-"212
-[e ( _UART_Transmit_Str (1 :s 3C ]
-"214
-}
-[; ;adc.c: 214: }
-[e $U 170  ]
-"194
-[e :U 171 ]
-[e [\ _rcvd_status , $ -> -> 110 `ui `uc 172
- 173 ]
-"214
-[e :U 170 ]
-[; ;adc.c: 215: }
-"215
-[e :UE 169 ]
-}
-"229
-[v _Is_ADC_Converting `(uc ~T0 @X0 1 ef ]
-"230
-{
-[; ;adc.c: 229: char Is_ADC_Converting()
-[; ;adc.c: 230: {
-[e :U _Is_ADC_Converting ]
-[f ]
-[; ;adc.c: 232: if(ADCON0bits.GO == 0)
-"232
-[e $ ! == -> . . _ADCON0bits 1 1 `i -> 0 `i 175  ]
-[; ;adc.c: 233: return ('n');
-"233
-[e ) -> -> 110 `ui `uc ]
-[e $UE 174  ]
-[e :U 175 ]
-[; ;adc.c: 235: return ('y');
-"235
-[e ) -> -> 121 `ui `uc ]
-[e $UE 174  ]
-[; ;adc.c: 236: }
-"236
-[e :UE 174 ]
-}
-"251
-[v _Encoded_To_Actual_Analog_Val_Calc `(v ~T0 @X0 1 ef5`ul`ul`ul`C*ul`C*ul ]
-"253
-{
-[; ;adc.c: 251: void Encoded_To_Actual_Analog_Val_Calc(unsigned long adc_value, unsigned long int full_scale_analog_val,unsigned long int min_analog_val, unsigned long *const analog_val_in_digital_int, unsigned long *const analog_val_in_digital_frac )
-[; ;adc.c: 253: {
-[e :U _Encoded_To_Actual_Analog_Val_Calc ]
-"251
-[v _adc_value `ul ~T0 @X0 1 r1 ]
-[v _full_scale_analog_val `ul ~T0 @X0 1 r2 ]
-[v _min_analog_val `ul ~T0 @X0 1 r3 ]
-[v F1809 `*ul ~T0 @X0 1 t ]
-[v _analog_val_in_digital_int `C*ul ~T0 @X0 1 r4 ]
-[v F1811 `*ul ~T0 @X0 1 t ]
-[v _analog_val_in_digital_frac `C*ul ~T0 @X0 1 r5 ]
-"253
-[f ]
-"254
-[v _temp_val_1 `ul ~T0 @X0 1 a ]
-[v _temp_val_10 `ul ~T0 @X0 1 a ]
-[v _temp_val_100 `ul ~T0 @X0 1 a ]
-[v _temp_val_1000 `ul ~T0 @X0 1 a ]
-[v _remainder_val `ul ~T0 @X0 1 a ]
-[v _temp_remainder_val `ul ~T0 @X0 1 a ]
-[v _remainder_val_1 `ul ~T0 @X0 1 a ]
-[v _remainder_val_10 `ul ~T0 @X0 1 a ]
-[; ;adc.c: 254: unsigned long temp_val_1, temp_val_10, temp_val_100, temp_val_1000, remainder_val, temp_remainder_val, remainder_val_1, remainder_val_10;
-[; ;adc.c: 258: if(full_scale_analog_val < 65 )
-"258
-[e $ ! < _full_scale_analog_val -> -> -> 65 `i `l `ul 177  ]
-[; ;adc.c: 259: {
-"259
-{
-[; ;adc.c: 260: temp_val_1 = ((full_scale_analog_val * adc_value) / (1023UL)) ;
-"260
-[e = _temp_val_1 / * _full_scale_analog_val _adc_value -> 1023 `ul ]
-[; ;adc.c: 261: *analog_val_in_digital_int = temp_val_1 + min_analog_val;
-"261
-[e = *U _analog_val_in_digital_int + _temp_val_1 _min_analog_val ]
-[; ;adc.c: 262: remainder_val = (full_scale_analog_val * adc_value) % (1023UL);
-"262
-[e = _remainder_val % * _full_scale_analog_val _adc_value -> 1023 `ul ]
-[; ;adc.c: 263: remainder_val_1 = ((remainder_val * 10) / (1023UL));
-"263
-[e = _remainder_val_1 / * _remainder_val -> -> -> 10 `i `l `ul -> 1023 `ul ]
-[; ;adc.c: 264: temp_remainder_val = ((remainder_val * 10) % (1023UL));
-"264
-[e = _temp_remainder_val % * _remainder_val -> -> -> 10 `i `l `ul -> 1023 `ul ]
-[; ;adc.c: 265: remainder_val_10 = ((temp_remainder_val * 10) / (1023UL));
-"265
-[e = _remainder_val_10 / * _temp_remainder_val -> -> -> 10 `i `l `ul -> 1023 `ul ]
-[; ;adc.c: 266: *analog_val_in_digital_frac = (remainder_val_1 * 100 )+ remainder_val_10 * 10 ;
-"266
-[e = *U _analog_val_in_digital_frac + * _remainder_val_1 -> -> -> 100 `i `l `ul * _remainder_val_10 -> -> -> 10 `i `l `ul ]
-[; ;adc.c: 267: return;
+[; ;timer.c: 266: }
+[; ;timer.c: 267: timer1_req_time_max_update = timer1_req_time_delay_in_milli_sec / set_timer1_req_time_1_update_in_milli_sec;
 "267
-[e $UE 176  ]
-"268
+[e = _timer1_req_time_max_update / _timer1_req_time_delay_in_milli_sec _set_timer1_req_time_1_update_in_milli_sec ]
+[; ;timer.c: 276: switch(timer1_prescale)
+"276
+[e $U 169  ]
+[; ;timer.c: 277: {
+"277
+{
+[; ;timer.c: 278: case 1:
+"278
+[e :U 170 ]
+[; ;timer.c: 279: timer1_adjust_init_val = 2;
+"279
+[e = _timer1_adjust_init_val -> -> 2 `i `ui ]
+[; ;timer.c: 280: break;
+"280
+[e $U 168  ]
+[; ;timer.c: 281: case 2:
+"281
+[e :U 171 ]
+[; ;timer.c: 282: timer1_adjust_init_val = 1;
+"282
+[e = _timer1_adjust_init_val -> -> 1 `i `ui ]
+[; ;timer.c: 283: break;
+"283
+[e $U 168  ]
+[; ;timer.c: 284: default:
+"284
+[e :U 172 ]
+[; ;timer.c: 285: timer1_adjust_init_val = 0;
+"285
+[e = _timer1_adjust_init_val -> -> 0 `i `ui ]
+"286
+}
+[; ;timer.c: 286: }
+[e $U 168  ]
+"276
+[e :U 169 ]
+[e [\ _timer1_prescale , $ -> -> 1 `i `ui 170
+ , $ -> -> 2 `i `ui 171
+ 172 ]
+"286
+[e :U 168 ]
+[; ;timer.c: 290: inc_timer1 = 1000ul * set_timer1_tick_in_milli_sec;
+"290
+[e = _inc_timer1 * -> 1000 `ul _set_timer1_tick_in_milli_sec ]
+[; ;timer.c: 291: timer1_init_val = ((65535UL) - (inc_timer1/timer1_prescale)) + 1 + timer1_adjust_init_val;
+"291
+[e = _timer1_init_val + + - -> 65535 `ul / _inc_timer1 -> _timer1_prescale `ul -> -> -> 1 `i `l `ul -> _timer1_adjust_init_val `ul ]
+[; ;timer.c: 292: TMR1H = timer1_init_val / 256UL;
+"292
+[e = _TMR1H -> / _timer1_init_val -> 256 `ul `uc ]
+[; ;timer.c: 293: TMR1L = timer1_init_val % 256UL;
+"293
+[e = _TMR1L -> % _timer1_init_val -> 256 `ul `uc ]
+[; ;timer.c: 294: }
+"294
+[e :UE 165 ]
+}
+"309
+[v _Timer2_Run `(v ~T0 @X0 1 ef5`CE1746`Cul`CE1776`CE1781`Cui ]
+"311
+{
+[; ;timer.c: 309: void Timer2_Run(const timer2_run_states set_timer2_run_mode, const unsigned long int set_req_time_delay_in_milli_sec, const timer2_service_types set_timer2_service, const timer2_prescaler_types set_timer2_prescaler_type, const unsigned int set_timer2
+[; ;timer.c: 311: {
+[e :U _Timer2_Run ]
+"309
+[v _set_timer2_run_mode `CE1746 ~T0 @X0 1 r1 ]
+[v _set_req_time_delay_in_milli_sec `Cul ~T0 @X0 1 r2 ]
+[v _set_timer2_service `CE1776 ~T0 @X0 1 r3 ]
+[v _set_timer2_prescaler_type `CE1781 ~T0 @X0 1 r4 ]
+[v _set_timer2_postscaler_val `Cui ~T0 @X0 1 r5 ]
+"311
+[f ]
+[; ;timer.c: 313: Timer2_Stop();
+"313
+[e ( _Timer2_Stop ..  ]
+[; ;timer.c: 314: if(set_timer2_service & 0x04)
+"314
+[e $ ! != & -> _set_timer2_service `i -> 4 `i -> 0 `i 174  ]
+[; ;timer.c: 315: {
+"315
+{
+[; ;timer.c: 317: return;
+"317
+[e $UE 173  ]
+"318
+}
+[e :U 174 ]
+[; ;timer.c: 318: }
+[; ;timer.c: 320: timer2_cur_service_type = set_timer2_service;
+"320
+[e = _timer2_cur_service_type _set_timer2_service ]
+[; ;timer.c: 321: timer2_cur_run_state = timer2_last_run_state_before_stop = set_timer2_run_mode;
+"321
+[e = _timer2_cur_run_state = _timer2_last_run_state_before_stop _set_timer2_run_mode ]
+[; ;timer.c: 322: if(timer2_cur_service_type & 0x02)
+"322
+[e $ ! != & -> _timer2_cur_service_type `i -> 2 `i -> 0 `i 175  ]
+[; ;timer.c: 323: {
+"323
+{
+[; ;timer.c: 325: TMR2 = 0x0000;
+"325
+[e = _TMR2 -> -> 0 `i `uc ]
+[; ;timer.c: 326: TMR2IF = 0;
+"326
+[e = _TMR2IF -> -> 0 `i `b ]
+"327
+}
+[e :U 175 ]
+[; ;timer.c: 327: }
+[; ;timer.c: 328: if(timer2_cur_service_type & 0x01)
+"328
+[e $ ! != & -> _timer2_cur_service_type `i -> 1 `i -> 0 `i 176  ]
+[; ;timer.c: 329: {
+"329
+{
+[; ;timer.c: 331: TMR2IF = 0;
+"331
+[e = _TMR2IF -> -> 0 `i `b ]
+[; ;timer.c: 332: PIE1bits.TMR2IE = 1;
+"332
+[e = . . _PIE1bits 0 1 -> -> 1 `i `uc ]
+[; ;timer.c: 333: INTCONbits.PEIE = 1;
+"333
+[e = . . _INTCONbits 0 6 -> -> 1 `i `uc ]
+[; ;timer.c: 334: INTCONbits.GIE = 1;
+"334
+[e = . . _INTCONbits 0 7 -> -> 1 `i `uc ]
+"339
+}
+[; ;timer.c: 339: }
+[e $U 177  ]
+"340
+[e :U 176 ]
+[; ;timer.c: 340: else
+[; ;timer.c: 341: {
+"341
+{
+[; ;timer.c: 343: PIE1bits.TMR2IE = 0;
+"343
+[e = . . _PIE1bits 0 1 -> -> 0 `i `uc ]
+"348
 }
 [e :U 177 ]
-[; ;adc.c: 268: }
-[; ;adc.c: 270: *analog_val_in_digital_int = 0;
-"270
-[e = *U _analog_val_in_digital_int -> -> -> 0 `i `l `ul ]
-[; ;adc.c: 271: *analog_val_in_digital_frac = 0;
-"271
-[e = *U _analog_val_in_digital_frac -> -> -> 0 `i `l `ul ]
-[; ;adc.c: 272: }
-"272
-[e :UE 176 ]
+[; ;timer.c: 348: }
+[; ;timer.c: 350: T2CON = set_timer2_prescaler_type | ((set_timer2_postscaler_val - 1) << 4) ;
+"350
+[e = _T2CON -> | -> _set_timer2_prescaler_type `ui << - _set_timer2_postscaler_val -> -> 1 `i `ui -> 4 `i `uc ]
+[; ;timer.c: 351: Timer2_Prescale();
+"351
+[e ( _Timer2_Prescale ..  ]
+[; ;timer.c: 365: T2CONbits.TMR2ON = 1 ;
+"365
+[e = . . _T2CONbits 0 1 -> -> 1 `i `uc ]
+[; ;timer.c: 366: }
+"366
+[e :UE 173 ]
 }
-"286
-[v _Encoded_To_Percent_Calc `(v ~T0 @X0 1 ef3`ul`C*ui`C*ui ]
-"287
+"380
+[v _Timer2_Stop `(v ~T0 @X0 1 ef ]
+"381
 {
-[; ;adc.c: 286: void Encoded_To_Percent_Calc(unsigned long adc_value, unsigned int *const percent_int, unsigned int *const percent_frac )
-[; ;adc.c: 287: {
-[e :U _Encoded_To_Percent_Calc ]
-"286
-[v _adc_value `ul ~T0 @X0 1 r1 ]
-[v F1822 `*ui ~T0 @X0 1 t ]
-[v _percent_int `C*ui ~T0 @X0 1 r2 ]
-[v F1824 `*ui ~T0 @X0 1 t ]
-[v _percent_frac `C*ui ~T0 @X0 1 r3 ]
-"287
+[; ;timer.c: 380: void Timer2_Stop()
+[; ;timer.c: 381: {
+[e :U _Timer2_Stop ]
 [f ]
-"288
-[v _remainder_val_1 `ui ~T0 @X0 1 a ]
-"289
-[v _temp_percent_int `ul ~T0 @X0 1 a ]
-[; ;adc.c: 288: unsigned int remainder_val_1;
-[; ;adc.c: 289: unsigned long temp_percent_int;
-[; ;adc.c: 292: temp_percent_int = (100 * adc_value);
-"292
-[e = _temp_percent_int * -> -> -> 100 `i `l `ul _adc_value ]
-[; ;adc.c: 293: *percent_int = (100 * adc_value) / (1023UL);
-"293
-[e = *U _percent_int -> / * -> -> -> 100 `i `l `ul _adc_value -> 1023 `ul `ui ]
-[; ;adc.c: 294: remainder_val_1 = temp_percent_int % (1023UL);
-"294
-[e = _remainder_val_1 -> % _temp_percent_int -> 1023 `ul `ui ]
-[; ;adc.c: 295: *percent_frac = (remainder_val_1 * 10) / (1023UL);
-"295
-[e = *U _percent_frac -> / -> * _remainder_val_1 -> -> 10 `i `ui `ul -> 1023 `ul `ui ]
-[; ;adc.c: 296: }
-"296
+[; ;timer.c: 383: {
+"383
+{
+[; ;timer.c: 384: T2CONbits.TMR2ON = 0 ;
+"384
+[e = . . _T2CONbits 0 1 -> -> 0 `i `uc ]
+[; ;timer.c: 385: PIE1bits.TMR2IE = 0;
+"385
+[e = . . _PIE1bits 0 1 -> -> 0 `i `uc ]
+[; ;timer.c: 386: TMR2IF = 0;
+"386
+[e = _TMR2IF -> -> 0 `i `b ]
+[; ;timer.c: 387: timer2_cur_run_state = TMR2_STOP_STATE;
+"387
+[e = _timer2_cur_run_state . `E1746 0 ]
+[; ;timer.c: 388: timer2_cur_service_type = TMR2_INVALID_SERVICE;
+"388
+[e = _timer2_cur_service_type . `E1776 0 ]
+"394
+}
+[; ;timer.c: 394: }
+[; ;timer.c: 395: }
+"395
 [e :UE 178 ]
 }
-"311
-[v _Actual_Analog_Val_To_Encoded_Calc `(v ~T0 @X0 1 ef4`Cul`ul`ul`C*ul ]
-"313
+"409
+[v _Timer2_Prescale `(v ~T0 @X0 1 ef ]
+"410
 {
-[; ;adc.c: 311: void Actual_Analog_Val_To_Encoded_Calc(const unsigned long actual_analog_val, unsigned long int full_scale_analog_val, unsigned long int min_analog_val, unsigned long *const encoded_val)
-[; ;adc.c: 313: {
-[e :U _Actual_Analog_Val_To_Encoded_Calc ]
-"311
-[v _actual_analog_val `Cul ~T0 @X0 1 r1 ]
-[v _full_scale_analog_val `ul ~T0 @X0 1 r2 ]
-[v _min_analog_val `ul ~T0 @X0 1 r3 ]
-[v _encoded_val `C*ul ~T0 @X0 1 r4 ]
-"313
+[; ;timer.c: 409: void Timer2_Prescale()
+[; ;timer.c: 410: {
+[e :U _Timer2_Prescale ]
 [f ]
-"314
-[v _remainder_val_1 `ul ~T0 @X0 1 a ]
-"315
-[v _temp_encoded_int `ul ~T0 @X0 1 a ]
-[; ;adc.c: 314: unsigned long remainder_val_1;
-[; ;adc.c: 315: unsigned long temp_encoded_int;
-[; ;adc.c: 317: if(actual_analog_val < 65)
-"317
-[e $ ! < _actual_analog_val -> -> -> 65 `i `l `ul 180  ]
-[; ;adc.c: 318: {
-"318
+"411
+[v _i `ui ~T0 @X0 1 a ]
+[; ;timer.c: 411: unsigned int i;
+[; ;timer.c: 413: timer2_prescale = 1;
+"413
+[e = _timer2_prescale -> -> 1 `i `ui ]
+[; ;timer.c: 414: timer2_prescale_shift= 0;
+"414
+[e = _timer2_prescale_shift -> -> 0 `i `ui ]
+[; ;timer.c: 415: if(T2CKPS1 == 1)
+"415
+[e $ ! == -> _T2CKPS1 `i -> 1 `i 180  ]
+[; ;timer.c: 416: {
+"416
 {
-[; ;adc.c: 319: *encoded_val = ((actual_analog_val * (1023UL)) / full_scale_analog_val) - min_analog_val;
-"319
-[e = *U _encoded_val - / * _actual_analog_val -> 1023 `ul _full_scale_analog_val _min_analog_val ]
-[; ;adc.c: 320: return;
-"320
-[e $UE 179  ]
-"321
+[; ;timer.c: 417: timer2_prescale_shift = 0x02;
+"417
+[e = _timer2_prescale_shift -> -> 2 `i `ui ]
+"418
 }
+[; ;timer.c: 418: }
+[e $U 181  ]
+"419
 [e :U 180 ]
-[; ;adc.c: 321: }
-[; ;adc.c: 323: *encoded_val = 0;
-"323
-[e = *U _encoded_val -> -> -> 0 `i `l `ul ]
-[; ;adc.c: 324: }
-"324
+[; ;timer.c: 419: else
+[; ;timer.c: 420: {
+"420
+{
+[; ;timer.c: 421: if(T2CKPS0 == 1)
+"421
+[e $ ! == -> _T2CKPS0 `i -> 1 `i 182  ]
+[; ;timer.c: 422: {
+"422
+{
+[; ;timer.c: 423: timer2_prescale_shift = 0x01;
+"423
+[e = _timer2_prescale_shift -> -> 1 `i `ui ]
+"424
+}
+[e :U 182 ]
+"425
+}
+[e :U 181 ]
+[; ;timer.c: 424: }
+[; ;timer.c: 425: }
+[; ;timer.c: 426: for(i = 1; i <= timer2_prescale_shift; ++i)
+"426
+{
+[e = _i -> -> 1 `i `ui ]
+[e $U 186  ]
+"427
+[e :U 183 ]
+[; ;timer.c: 427: {
+{
+[; ;timer.c: 428: timer2_prescale *= 4;
+"428
+[e =* _timer2_prescale -> -> 4 `i `ui ]
+"429
+}
+"426
+[e =+ _i -> -> 1 `i `ui ]
+[e :U 186 ]
+[e $ <= _i _timer2_prescale_shift 183  ]
+[e :U 184 ]
+"429
+}
+[; ;timer.c: 429: }
+[; ;timer.c: 430: }
+"430
 [e :UE 179 ]
 }
-[a 1C 69 82 82 58 32 105 110 118 97 108 105 100 32 65 68 67 32 99 104 97 110 110 101 108 32 115 101 108 101 99 116 32 58 32 0 ]
-[a 2C 69 82 82 58 32 116 114 121 32 116 111 32 115 116 97 114 116 32 65 68 67 32 119 104 105 108 101 32 65 68 67 32 67 111 110 118 101 114 116 105 110 103 32 13 0 ]
-[a 3C 69 82 82 58 32 116 114 121 32 116 111 32 100 105 115 97 98 108 101 32 65 68 67 32 119 104 105 108 101 32 65 68 67 32 67 111 110 118 101 114 116 105 110 103 32 13 0 ]
+"447
+[v _Timer2_Load_Init_Val_Calc `(v ~T0 @X0 1 ef1`Cul ]
+"448
+{
+[; ;timer.c: 447: void Timer2_Load_Init_Val_Calc(const unsigned long int set_req_time_delay_in_milli_sec)
+[; ;timer.c: 448: {
+[e :U _Timer2_Load_Init_Val_Calc ]
+"447
+[v _set_req_time_delay_in_milli_sec `Cul ~T0 @X0 1 r1 ]
+"448
+[f ]
+"449
+[v _inc_timer2 `ul ~T0 @X0 1 a ]
+"450
+[v _timer2_adjust_init_val `ui ~T0 @X0 1 a ]
+"451
+[v _set_timer2_tick_in_milli_sec `ul ~T0 @X0 1 a ]
+[; ;timer.c: 449: unsigned long int inc_timer2;
+[; ;timer.c: 450: unsigned int timer2_adjust_init_val;
+[; ;timer.c: 451: unsigned long int set_timer2_tick_in_milli_sec = (50U);
+[e = _set_timer2_tick_in_milli_sec -> -> 50 `ui `ul ]
+"452
+[v _set_timer2_req_time_1_update_in_milli_sec `ul ~T0 @X0 1 a ]
+[; ;timer.c: 452: unsigned long int set_timer2_req_time_1_update_in_milli_sec = (1000UL);
+[e = _set_timer2_req_time_1_update_in_milli_sec -> 1000 `ul ]
+"453
+[v _timer2_remainder `ul ~T0 @X0 1 a ]
+[; ;timer.c: 453: unsigned long int timer2_remainder;
+[; ;timer.c: 463: timer2_elapsed_num_overflow_1_update = 0;
+"463
+[e = _timer2_elapsed_num_overflow_1_update -> -> -> 0 `i `l `ul ]
+[; ;timer.c: 464: timer2_1_update = set_timer2_req_time_1_update_in_milli_sec /set_timer2_tick_in_milli_sec;
+"464
+[e = _timer2_1_update / _set_timer2_req_time_1_update_in_milli_sec _set_timer2_tick_in_milli_sec ]
+[; ;timer.c: 465: timer2_remainder = set_req_time_delay_in_milli_sec % set_timer2_req_time_1_update_in_milli_sec;
+"465
+[e = _timer2_remainder % _set_req_time_delay_in_milli_sec _set_timer2_req_time_1_update_in_milli_sec ]
+[; ;timer.c: 466: if( timer2_remainder == 0)
+"466
+[e $ ! == _timer2_remainder -> -> -> 0 `i `l `ul 188  ]
+[; ;timer.c: 467: {
+"467
+{
+[; ;timer.c: 469: timer2_req_time_delay_in_milli_sec = set_req_time_delay_in_milli_sec;
+"469
+[e = _timer2_req_time_delay_in_milli_sec _set_req_time_delay_in_milli_sec ]
+"470
+}
+[; ;timer.c: 470: }
+[e $U 189  ]
+"471
+[e :U 188 ]
+[; ;timer.c: 471: else
+[; ;timer.c: 472: {
+"472
+{
+[; ;timer.c: 476: timer2_req_time_delay_in_milli_sec = set_req_time_delay_in_milli_sec - timer2_remainder;
+"476
+[e = _timer2_req_time_delay_in_milli_sec - _set_req_time_delay_in_milli_sec _timer2_remainder ]
+"481
+}
+[e :U 189 ]
+[; ;timer.c: 481: }
+[; ;timer.c: 482: timer2_req_time_max_update = timer2_req_time_delay_in_milli_sec / set_timer2_req_time_1_update_in_milli_sec;
+"482
+[e = _timer2_req_time_max_update / _timer2_req_time_delay_in_milli_sec _set_timer2_req_time_1_update_in_milli_sec ]
+[; ;timer.c: 491: switch(timer2_prescale)
+"491
+[e $U 191  ]
+[; ;timer.c: 492: {
+"492
+{
+[; ;timer.c: 493: case 1:
+"493
+[e :U 192 ]
+[; ;timer.c: 494: timer2_adjust_init_val = 2;
+"494
+[e = _timer2_adjust_init_val -> -> 2 `i `ui ]
+[; ;timer.c: 495: break;
+"495
+[e $U 190  ]
+[; ;timer.c: 496: case 2:
+"496
+[e :U 193 ]
+[; ;timer.c: 497: timer2_adjust_init_val = 1;
+"497
+[e = _timer2_adjust_init_val -> -> 1 `i `ui ]
+[; ;timer.c: 498: break;
+"498
+[e $U 190  ]
+[; ;timer.c: 499: default:
+"499
+[e :U 194 ]
+[; ;timer.c: 500: timer2_adjust_init_val = 0;
+"500
+[e = _timer2_adjust_init_val -> -> 0 `i `ui ]
+"501
+}
+[; ;timer.c: 501: }
+[e $U 190  ]
+"491
+[e :U 191 ]
+[e [\ _timer2_prescale , $ -> -> 1 `i `ui 192
+ , $ -> -> 2 `i `ui 193
+ 194 ]
+"501
+[e :U 190 ]
+[; ;timer.c: 505: inc_timer2 = 1000ul * set_timer2_tick_in_milli_sec;
+"505
+[e = _inc_timer2 * -> 1000 `ul _set_timer2_tick_in_milli_sec ]
+[; ;timer.c: 506: timer2_init_val = ((65535UL) - (inc_timer2/timer1_prescale)) + 1 + timer2_adjust_init_val;
+"506
+[e = _timer2_init_val + + - -> 65535 `ul / _inc_timer2 -> _timer1_prescale `ul -> -> -> 1 `i `l `ul -> _timer2_adjust_init_val `ul ]
+[; ;timer.c: 507: TMR2 = timer2_init_val;
+"507
+[e = _TMR2 -> _timer2_init_val `uc ]
+[; ;timer.c: 508: }
+"508
+[e :UE 187 ]
+}
+[a 3C 69 82 82 58 32 116 109 114 49 32 105 115 32 99 111 117 110 116 101 114 32 98 117 116 32 99 108 107 32 115 111 117 114 99 101 32 105 115 32 110 111 116 32 101 120 116 101 114 110 97 108 32 13 0 ]
+[a 1C 69 82 82 58 32 116 109 114 49 32 105 115 32 116 105 109 101 114 32 98 117 116 32 99 108 107 32 115 111 117 114 99 101 32 105 115 32 110 111 116 32 105 110 116 101 114 110 97 108 32 13 0 ]
+[a 2C 69 82 82 58 32 116 109 114 49 32 105 115 32 99 111 117 110 116 101 114 32 98 117 116 32 76 80 32 111 115 99 32 105 115 32 100 105 115 97 98 108 101 100 32 13 0 ]

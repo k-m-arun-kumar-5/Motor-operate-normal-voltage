@@ -1,66 +1,47 @@
 Version 3.2 HI-TECH Software Intermediate Code
-"65 adc.h
-[s S145 `ul 1 :2 `uc 1 :2 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S145 . adc_value_channel adc_cur_service_type adc_clk_src_type volt_ref adc_result_format_justfied_type adc_vref_neg_src_type adc_vref_plus_src_type ]
-"23 adc.c
-[c E1739 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 .. ]
-[n E1739 . ADC_CH_00 ADC_CH_01 ADC_CH_02 ADC_CH_03 ADC_CH_04 ADC_CH_05 ADC_CH_06 ADC_CH_07 ADC_CH_08 ADC_CH_09 ADC_CH_10 ADC_CH_11 ADC_CH_12 ADC_CH_13 ADC_INVALID_CH_14  ]
-"83 adc.h
-[v _Is_ADC_Converting `(uc ~T0 @X0 0 ef ]
-"1243 C:\Program Files\Microchip\xc8\v1.44\include\pic16f887.h
-[v _ADCON0 `Vuc ~T0 @X0 0 e@31 ]
-"2975
-[v _ADCON1 `Vuc ~T0 @X0 0 e@159 ]
-"1249
-[s S45 :1 `uc 1 :1 `uc 1 :4 `uc 1 :2 `uc 1 ]
-[n S45 . ADON GO_nDONE CHS ADCS ]
-"1255
-[s S46 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S46 . . GO CHS0 CHS1 CHS2 CHS3 ADCS0 ADCS1 ]
-"1265
-[s S47 :1 `uc 1 :1 `uc 1 ]
-[n S47 . . nDONE ]
-"1269
-[s S48 :1 `uc 1 :1 `uc 1 ]
-[n S48 . . GO_DONE ]
-"1248
-[u S44 `S45 1 `S46 1 `S47 1 `S48 1 ]
-[n S44 . . . . . ]
-"1274
-[v _ADCON0bits `VS44 ~T0 @X0 0 e@31 ]
-"3574
-[v _ADIF `Vb ~T0 @X0 0 e@102 ]
-"1706
-[s S63 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S63 . TMR1IE TMR2IE CCP1IE SSPIE TXIE RCIE ADIE ]
-"1705
-[u S62 `S63 1 ]
-[n S62 . . ]
-"1716
-[v _PIE1bits `VS62 ~T0 @X0 0 e@140 ]
-"463
-[s S16 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S16 . RBIF INTF T0IF RBIE INTE T0IE PEIE GIE ]
-"473
-[s S17 :2 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 ]
-[n S17 . . TMR0IF . TMR0IE ]
-"462
-[u S15 `S16 1 `S17 1 ]
-[n S15 . . . ]
-"480
-[v _INTCONbits `VS15 ~T0 @X0 0 e@11 ]
-[v F1637 `(v ~T0 @X0 1 tf1`ul ]
-"153 C:\Program Files\Microchip\xc8\v1.44\include\pic.h
-[v __delay `JF1637 ~T0 @X0 0 e ]
-[p i __delay ]
-"3782 C:\Program Files\Microchip\xc8\v1.44\include\pic16f887.h
-[v _GO `Vb ~T0 @X0 0 e@249 ]
-"3570
-[v _ADFM `Vb ~T0 @X0 0 e@1279 ]
-"2968
-[v _ADRESL `Vuc ~T0 @X0 0 e@158 ]
-"1236
-[v _ADRESH `Vuc ~T0 @X0 0 e@30 ]
+"2640 C:\Program Files\Microchip\xc8\v1.44\include\pic16f887.h
+[v _SPBRG `Vuc ~T0 @X0 0 e@153 ]
+"3628
+[v _BRG16 `Vb ~T0 @X0 0 e@3131 ]
+"3646
+[v _BRGH `Vb ~T0 @X0 0 e@1218 ]
+"4022
+[v _SPEN `Vb ~T0 @X0 0 e@199 ]
+"4058
+[v _SYNC `Vb ~T0 @X0 0 e@1220 ]
+"3740
+[v _CREN `Vb ~T0 @X0 0 e@196 ]
+"4208
+[v _TXEN `Vb ~T0 @X0 0 e@1221 ]
+"4028
+[v _SREN `Vb ~T0 @X0 0 e@197 ]
+"4210
+[v _TXIE `Vb ~T0 @X0 0 e@1124 ]
+"3964
+[v _RCIE `Vb ~T0 @X0 0 e@1125 ]
+"4202
+[v _TX9 `Vb ~T0 @X0 0 e@1222 ]
+"4002
+[v _RX9 `Vb ~T0 @X0 0 e@198 ]
+"1131
+[v _TXREG `Vuc ~T0 @X0 0 e@25 ]
+"4188
+[v _TRMT `Vb ~T0 @X0 0 e@1217 ]
+"3850
+[v _OERR `Vb ~T0 @X0 0 e@193 ]
+"107 lcd.h
+[v _Goto_XY_LCD_Disp `(v ~T0 @X0 0 ef2`Cui`Cui ]
+"105
+[v _LCD_Disp_Str `(v ~T0 @X0 0 ef1`*Cuc ]
+"3966 C:\Program Files\Microchip\xc8\v1.44\include\pic16f887.h
+[v _RCIF `Vb ~T0 @X0 0 e@101 ]
+"3774
+[v _FERR `Vb ~T0 @X0 0 e@194 ]
+"1138
+[v _RCREG `Vuc ~T0 @X0 0 e@26 ]
+"371 uart.c
+[c E1694 1 2 3 4 5 17 18 19 20 21 33 34 35 36 .. ]
+[n E1694 . DISP_UNSIGN_NUM_DIGIT1 DISP_UNSIGN_NUM_DIGIT2 DISP_UNSIGN_NUM_DIGIT3 DISP_UNSIGN_NUM_DIGIT4 DISP_UNSIGN_NUM_DIGIT5 DISP_SIGN_NUM_DIGIT1 DISP_SIGN_NUM_DIGIT2 DISP_SIGN_NUM_DIGIT3 DISP_SIGN_NUM_DIGIT4 DISP_SIGN_NUM_DIGIT5 DISP_HEX_DIGIT1 DISP_HEX_DIGIT2 DISP_HEX_DIGIT3 DISP_HEX_DIGIT4  ]
 "97 main.h
 [s S140 `ui -> 2 `i ]
 [n S140 . value_byte ]
@@ -82,22 +63,6 @@ Version 3.2 HI-TECH Software Intermediate Code
 "92
 [u S138 `S139 1 `S142 1 ]
 [n S138 . unsigned_val signed_val ]
-"180
-[v _to_disp `S138 ~T0 @X0 0 e ]
-"25 uart.h
-[v _UART_Transmit_Str `(v ~T0 @X0 0 ef1`*Cuc ]
-"158 adc.c
-[c E1694 1 2 3 4 5 17 18 19 20 21 33 34 35 36 .. ]
-[n E1694 . DISP_UNSIGN_NUM_DIGIT1 DISP_UNSIGN_NUM_DIGIT2 DISP_UNSIGN_NUM_DIGIT3 DISP_UNSIGN_NUM_DIGIT4 DISP_UNSIGN_NUM_DIGIT5 DISP_SIGN_NUM_DIGIT1 DISP_SIGN_NUM_DIGIT2 DISP_SIGN_NUM_DIGIT3 DISP_SIGN_NUM_DIGIT4 DISP_SIGN_NUM_DIGIT5 DISP_HEX_DIGIT1 DISP_HEX_DIGIT2 DISP_HEX_DIGIT3 DISP_HEX_DIGIT4  ]
-"28 uart.h
-[v _UART_Transmit_Num `(v ~T0 @X0 0 ef2`CE1694`CS138 ]
-"24
-[v _UART_Transmit_Char `(v ~T0 @X0 0 ef1`Cuc ]
-[v F1777 `*ul ~T0 @X0 1 t ]
-[v F1779 `*ul ~T0 @X0 1 t ]
-[v F1783 `*ui ~T0 @X0 1 t ]
-[v F1785 `*ui ~T0 @X0 1 t ]
-[v F1832 `*ul ~T0 @X0 1 t ]
 [; ;htc.h: 26: extern const char __xc8_OPTIM_SPEED;
 [; ;htc.h: 28: extern double __fpnormalize(double);
 [; ;xc8debug.h: 14: extern void __builtin_software_breakpoint(void);
@@ -1659,567 +1624,567 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;main.h: 176: DATA_IN_INVALID_FORMAT, DATA_IN_STR_FORMAT, DATA_IN_BINARY_FORMAT, DATA_IN_HEXA_FORMAT, DATA_IN_DECIMAL_FORMAT, DATA_IN_CHAR_FORMAT, DATA_IN_APPL_DEFINED_FORMAT
 [; ;main.h: 177: } data_format_types;
 [; ;main.h: 180: extern value_types to_disp;
-[; ;appl_conf.h: 22: typedef enum {
-[; ;appl_conf.h: 23: TMR1_STOP_STATE
-[; ;appl_conf.h: 24: } timer1_run_states;
-[; ;appl_conf.h: 26: typedef enum {
-[; ;appl_conf.h: 27: TMR2_STOP_STATE
-[; ;appl_conf.h: 28: } timer2_run_states;
-[; ;adc.h: 36: typedef enum {
-[; ;adc.h: 37: ADC_CH_00 = 0, ADC_CH_01, ADC_CH_02, ADC_CH_03, ADC_CH_04, ADC_CH_05, ADC_CH_06, ADC_CH_07, ADC_CH_08, ADC_CH_09, ADC_CH_10, ADC_CH_11, ADC_CH_12, ADC_CH_13, ADC_INVALID_CH_14
-[; ;adc.h: 38: } adc_channels;
-[; ;adc.h: 65: typedef struct {
-[; ;adc.h: 66: unsigned long adc_value_channel;
-[; ;adc.h: 67: unsigned int adc_cur_service_type: 2;
-[; ;adc.h: 68: unsigned int adc_clk_src_type: 2;
-[; ;adc.h: 69: unsigned int volt_ref: 1;
-[; ;adc.h: 70: unsigned int adc_result_format_justfied_type: 1;
-[; ;adc.h: 71: unsigned int adc_vref_neg_src_type: 1;
-[; ;adc.h: 72: unsigned int adc_vref_plus_src_type: 1;
-[; ;adc.h: 73: } adc_parameter_types;
-[; ;adc.h: 77: extern unsigned long analog_val_in_digital_ch[1];
-[; ;adc.h: 78: extern adc_parameter_types adc_cur_parameters[];
-[; ;adc.h: 79: extern adc_channels adc_cur_channel;
-[; ;adc.h: 81: void ADC_Start_Conv(adc_parameter_types *set_adc_conf);
-[; ;adc.h: 82: void ADC_Disable();
-[; ;adc.h: 83: char Is_ADC_Converting();
-[; ;adc.h: 84: void Encoded_To_Actual_Analog_Val_Calc(unsigned long adc_value, unsigned long int full_scale_analog_val,unsigned long int min_analog_val, unsigned long *const analog_val_in_digital_int, unsigned long *const analog_val_in_digital_frac );
-[; ;adc.h: 86: void Encoded_To_Percent_Calc(unsigned long adc_value, unsigned int *const percent_int, unsigned int *const percent_frac );
-[; ;adc.h: 87: void ADC_Conf_Channel(const adc_channels set_adc_cur_channel);
+[; ;lcd.h: 52: typedef struct {
+[; ;lcd.h: 53: struct {
+[; ;lcd.h: 54: unsigned int rs_pin: 1;
+[; ;lcd.h: 55: unsigned int rs_tris: 1;
+[; ;lcd.h: 56: unsigned int rw_pin: 1;
+[; ;lcd.h: 57: unsigned int rw_tris: 1;
+[; ;lcd.h: 58: unsigned int en_pin: 1;
+[; ;lcd.h: 59: unsigned int en_tris: 1;
+[; ;lcd.h: 60: unsigned int interface: 1;
+[; ;lcd.h: 61: unsigned int num_lines: 2;
+[; ;lcd.h: 62: unsigned int font: 1;
+[; ;lcd.h: 63: unsigned int check_bf: 1;
+[; ;lcd.h: 64: } conf;
+[; ;lcd.h: 65: union {
+[; ;lcd.h: 66: unsigned int tris;
+[; ;lcd.h: 67: struct {
+[; ;lcd.h: 68: unsigned int tris_0: 1;
+[; ;lcd.h: 69: unsigned int tris_1: 1;
+[; ;lcd.h: 70: unsigned int tris_2: 1;
+[; ;lcd.h: 71: unsigned int tris_3: 1;
+[; ;lcd.h: 72: unsigned int tris_4: 1;
+[; ;lcd.h: 73: unsigned int tris_5: 1;
+[; ;lcd.h: 74: unsigned int tris_6: 1;
+[; ;lcd.h: 75: unsigned int tris_7: 1;
+[; ;lcd.h: 76: } data_tris;
+[; ;lcd.h: 77: } data_triss;
+[; ;lcd.h: 78: union {
+[; ;lcd.h: 79: unsigned int pins;
+[; ;lcd.h: 80: struct {
+[; ;lcd.h: 81: unsigned int pin_0: 1;
+[; ;lcd.h: 82: unsigned int pin_1: 1;
+[; ;lcd.h: 83: unsigned int pin_2: 1;
+[; ;lcd.h: 84: unsigned int pin_3: 1;
+[; ;lcd.h: 85: unsigned int pin_4: 1;
+[; ;lcd.h: 86: unsigned int pin_5: 1;
+[; ;lcd.h: 87: unsigned int pin_6: 1;
+[; ;lcd.h: 88: unsigned int pin_7: 1;
+[; ;lcd.h: 89: } data_pin;
+[; ;lcd.h: 90: } data_pins;
+[; ;lcd.h: 91: } lcd;
+[; ;lcd.h: 93: extern char lcd_avail_loc_within_limit;
+[; ;lcd.h: 94: extern unsigned int cur_disp_lcd_loc , cur_input_lcd_loc ;
+[; ;lcd.h: 95: extern unsigned int lcd_read_command;
+[; ;lcd.h: 96: extern lcd lcd_unit;
+[; ;lcd.h: 99: void Delay_Time_By_Count(unsigned long int delay_time_in_count);
+[; ;lcd.h: 100: void LCD_Write_Pulse();
+[; ;lcd.h: 101: void LCD_Read_Pulse();
+[; ;lcd.h: 102: void Write_LCD_Command_NO_BF(const unsigned int lcd_cmd);
+[; ;lcd.h: 103: void Write_LCD_Command(const unsigned int lcd_cmd);
+[; ;lcd.h: 104: void Write_LCD_Data(const char lcd_disp_ch);
+[; ;lcd.h: 105: void LCD_Disp_Str(const char *lcd_disp_str);
+[; ;lcd.h: 106: void LCD_Disp_Num(const disp_num_types lcd_datanum_disp_format, const value_types lcd_disp_data_int);
+[; ;lcd.h: 107: void Goto_XY_LCD_Disp(const unsigned int start_line_num, const unsigned int start_col_num);
+[; ;lcd.h: 108: void Goto_XY_LCD_Input(unsigned int start_line_num, unsigned int start_col_num);
+[; ;lcd.h: 109: void From_Loc_to_XY_LCD(const unsigned int loc_lcd, unsigned int * const loc_lcd_line_num, unsigned int * const loc_lcd_col_num );
+[; ;lcd.h: 110: void From_XY_To_Loc_LCD(const unsigned int start_line_num, const unsigned int start_col_num, unsigned int * const lcd_loc);
+[; ;lcd.h: 111: void LCD_Init();
+[; ;lcd.h: 112: void Check_LCD_Busy();
+[; ;lcd.h: 113: unsigned int Read_LCD_Command();
+[; ;lcd.h: 114: void LCD_Clear_Screen();
+[; ;lcd.h: 115: void Write_Bit_in_Data( unsigned int *data, const unsigned int bit_pos, unsigned int set_bit_val );
 [; ;uart.h: 23: void UART_Init();
 [; ;uart.h: 24: void UART_Transmit_Char(const char transmit_char);
 [; ;uart.h: 25: void UART_Transmit_Str(const char *transmit_str);
 [; ;uart.h: 26: char UART_Receive_Char();
 [; ;uart.h: 27: int UART_Receive_Str();
 [; ;uart.h: 28: void UART_Transmit_Num(const disp_num_types uart_datanum_disp_format, const value_types uart_disp_data_int);
-"21 adc.c
-[v _analog_val_in_digital_ch `ul ~T0 @X0 -> -> 1 `i `ux e ]
-[; ;adc.c: 21: unsigned long analog_val_in_digital_ch[1];
-"22
-[v _adc_cur_parameters `S145 ~T0 @X0 -> -> 1 `i `ux e ]
-[; ;adc.c: 22: adc_parameter_types adc_cur_parameters[1];
-"23
-[v _adc_cur_channel `E1739 ~T0 @X0 1 e ]
-[; ;adc.c: 23: adc_channels adc_cur_channel;
-"37
-[v _ADC_Conf_Channel `(v ~T0 @X0 1 ef1`CE1739 ]
-"38
+"33 uart.c
+[v _UART_Init `(v ~T0 @X0 1 ef ]
+"34
 {
-[; ;adc.c: 37: void ADC_Conf_Channel(const adc_channels set_adc_cur_channel)
-[; ;adc.c: 38: {
-[e :U _ADC_Conf_Channel ]
-"37
-[v _set_adc_cur_channel `CE1739 ~T0 @X0 1 r1 ]
-"38
+[; ;uart.c: 33: void UART_Init()
+[; ;uart.c: 34: {
+[e :U _UART_Init ]
 [f ]
-[; ;adc.c: 39: if(set_adc_cur_channel <= ADC_CH_13)
+[; ;uart.c: 36: SPBRG = 32;
+"36
+[e = _SPBRG -> -> 32 `i `uc ]
+[; ;uart.c: 37: BRG16 = 0 ;
+"37
+[e = _BRG16 -> -> 0 `i `b ]
+[; ;uart.c: 38: BRGH = 0;
+"38
+[e = _BRGH -> -> 0 `i `b ]
+[; ;uart.c: 39: SPEN = 1;
 "39
-[e $ ! <= -> _set_adc_cur_channel `i -> . `E1739 13 `i 147  ]
-[; ;adc.c: 40: {
+[e = _SPEN -> -> 1 `i `b ]
+[; ;uart.c: 40: SYNC = 0;
 "40
-{
-[; ;adc.c: 41: adc_cur_channel = set_adc_cur_channel;
+[e = _SYNC -> -> 0 `i `b ]
+[; ;uart.c: 41: CREN = 1;
 "41
-[e = _adc_cur_channel _set_adc_cur_channel ]
-[; ;adc.c: 42: adc_cur_parameters[adc_cur_channel].adc_cur_service_type = (0x00);
+[e = _CREN -> -> 1 `i `b ]
+[; ;uart.c: 42: TXEN = 0;
 "42
-[e = . *U + &U _adc_cur_parameters * -> _adc_cur_channel `ux -> -> # *U &U _adc_cur_parameters `ui `ux 1 -> -> 0 `i `uc ]
-[; ;adc.c: 43: adc_cur_parameters[adc_cur_channel].adc_clk_src_type = (2u);
+[e = _TXEN -> -> 0 `i `b ]
+[; ;uart.c: 43: TXEN = 1;
 "43
-[e = . *U + &U _adc_cur_parameters * -> _adc_cur_channel `ux -> -> # *U &U _adc_cur_parameters `ui `ux 2 -> -> 2 `ui `uc ]
-[; ;adc.c: 44: adc_cur_parameters[adc_cur_channel].adc_result_format_justfied_type = (1u);
-"44
-[e = . *U + &U _adc_cur_parameters * -> _adc_cur_channel `ux -> -> # *U &U _adc_cur_parameters `ui `ux 4 -> -> 1 `ui `uc ]
-[; ;adc.c: 45: adc_cur_parameters[adc_cur_channel].adc_vref_neg_src_type = (0u);
+[e = _TXEN -> -> 1 `i `b ]
+[; ;uart.c: 45: SREN = 0;
 "45
-[e = . *U + &U _adc_cur_parameters * -> _adc_cur_channel `ux -> -> # *U &U _adc_cur_parameters `ui `ux 5 -> -> 0 `ui `uc ]
-[; ;adc.c: 46: adc_cur_parameters[adc_cur_channel].adc_vref_plus_src_type = (0u);
+[e = _SREN -> -> 0 `i `b ]
+[; ;uart.c: 46: TXIE = 0;
 "46
-[e = . *U + &U _adc_cur_parameters * -> _adc_cur_channel `ux -> -> # *U &U _adc_cur_parameters `ui `ux 6 -> -> 0 `ui `uc ]
+[e = _TXIE -> -> 0 `i `b ]
+[; ;uart.c: 47: RCIE = 1;
 "47
-}
-[e :U 147 ]
-[; ;adc.c: 47: }
-[; ;adc.c: 48: }
+[e = _RCIE -> -> 1 `i `b ]
+[; ;uart.c: 48: TX9 = 0;
 "48
-[e :UE 146 ]
+[e = _TX9 -> -> 0 `i `b ]
+[; ;uart.c: 49: RX9 = 0;
+"49
+[e = _RX9 -> -> 0 `i `b ]
+[; ;uart.c: 51: }
+"51
+[e :UE 151 ]
 }
-"62
-[v _ADC_Start_Conv `(v ~T0 @X0 1 ef1`*S145 ]
-"63
-{
-[; ;adc.c: 62: void ADC_Start_Conv(adc_parameter_types *set_adc_parameters )
-[; ;adc.c: 63: {
-[e :U _ADC_Start_Conv ]
-"62
-[v _set_adc_parameters `*S145 ~T0 @X0 1 r1 ]
-"63
-[f ]
-"64
-[v _rcvd_status `uc ~T0 @X0 1 a ]
 "65
-[v _adc_value_least_byte `ui ~T0 @X0 1 a ]
-[v _adc_value_most_byte `ui ~T0 @X0 1 a ]
-[; ;adc.c: 64: char rcvd_status;
-[; ;adc.c: 65: unsigned adc_value_least_byte, adc_value_most_byte;
-[; ;adc.c: 67: rcvd_status = Is_ADC_Converting();
+[v _UART_Transmit_Char `(v ~T0 @X0 1 ef1`Cuc ]
+"66
+{
+[; ;uart.c: 65: void UART_Transmit_Char(const char transmit_char)
+[; ;uart.c: 66: {
+[e :U _UART_Transmit_Char ]
+"65
+[v _transmit_char `Cuc ~T0 @X0 1 r1 ]
+"66
+[f ]
+[; ;uart.c: 67: TXREG = transmit_char;
 "67
-[e = _rcvd_status ( _Is_ADC_Converting ..  ]
-[; ;adc.c: 68: switch(rcvd_status)
+[e = _TXREG _transmit_char ]
+[; ;uart.c: 68: while(TRMT == 0);
 "68
-[e $U 150  ]
-[; ;adc.c: 69: {
-"69
-{
-[; ;adc.c: 71: case ('n'):
-"71
-[e :U 151 ]
-[; ;adc.c: 73: if(adc_cur_channel != ADC_INVALID_CH_14 )
-"73
-[e $ ! != -> _adc_cur_channel `i -> . `E1739 14 `i 152  ]
-[; ;adc.c: 74: {
-"74
-{
-[; ;adc.c: 75: if(adc_cur_channel < 14)
-"75
-[e $ ! < -> _adc_cur_channel `i -> 14 `i 153  ]
-[; ;adc.c: 76: {
-"76
-{
-[; ;adc.c: 77: ADCON0 = (set_adc_parameters->adc_clk_src_type <<6) | (adc_cur_channel << 2) ;
-"77
-[e = _ADCON0 -> | << -> . *U _set_adc_parameters 2 `i -> 6 `i << -> _adc_cur_channel `i -> 2 `i `uc ]
-[; ;adc.c: 78: ADCON1 = (set_adc_parameters->adc_result_format_justfied_type<<7) | (set_adc_parameters->adc_vref_neg_src_type << 5) | (set_adc_parameters->adc_vref_plus_src_type<<4);
-"78
-[e = _ADCON1 -> | | << -> . *U _set_adc_parameters 4 `i -> 7 `i << -> . *U _set_adc_parameters 5 `i -> 5 `i << -> . *U _set_adc_parameters 6 `i -> 4 `i `uc ]
-[; ;adc.c: 80: ADCON0bits.ADON = 1;
-"80
-[e = . . _ADCON0bits 0 0 -> -> 1 `i `uc ]
-[; ;adc.c: 81: ADIF = 0;
-"81
-[e = _ADIF -> -> 0 `i `b ]
-[; ;adc.c: 82: switch(set_adc_parameters->adc_cur_service_type)
-"82
-[e $U 155  ]
-[; ;adc.c: 83: {
-"83
-{
-[; ;adc.c: 84: case (0x01):
-"84
-[e :U 156 ]
-[; ;adc.c: 85: PIE1bits.ADIE = 1;
-"85
-[e = . . _PIE1bits 0 6 -> -> 1 `i `uc ]
-[; ;adc.c: 86: INTCONbits.PEIE = 1;
-"86
-[e = . . _INTCONbits 0 6 -> -> 1 `i `uc ]
-[; ;adc.c: 87: INTCONbits.GIE = 1;
-"87
-[e = . . _INTCONbits 0 7 -> -> 1 `i `uc ]
-[; ;adc.c: 93: break;
-"93
-[e $U 154  ]
-[; ;adc.c: 94: case (0x00):
-"94
-[e :U 157 ]
-[; ;adc.c: 95: PIE1bits.ADIE = 0;
-"95
-[e = . . _PIE1bits 0 6 -> -> 0 `i `uc ]
-[; ;adc.c: 100: break;
-"100
-[e $U 154  ]
-"101
-}
-[; ;adc.c: 101: }
-[e $U 154  ]
-"82
-[e :U 155 ]
-[e [\ . *U _set_adc_parameters 1 , $ -> -> 1 `i `uc 156
- , $ -> -> 0 `i `uc 157
- 154 ]
-"101
+[e $U 153  ]
 [e :U 154 ]
-[; ;adc.c: 121: _delay((unsigned long)((20)*((20000000)/4000000.0)));
-"121
-[e ( __delay (1 -> * -> -> 20 `i `d / -> -> 20000000 `l `d .4000000.0 `ul ]
-[; ;adc.c: 124: ADCON0bits.GO = 1;
-"124
-[e = . . _ADCON0bits 1 1 -> -> 1 `i `uc ]
-[; ;adc.c: 125: switch(set_adc_parameters->adc_cur_service_type)
-"125
-[e $U 159  ]
-[; ;adc.c: 126: {
-"126
-{
-[; ;adc.c: 127: case (0x00):
-"127
-[e :U 160 ]
-[; ;adc.c: 128: while(GO == 1);
-"128
-[e $U 161  ]
-[e :U 162 ]
-[e :U 161 ]
-[e $ == -> _GO `i -> 1 `i 162  ]
-[e :U 163 ]
-[; ;adc.c: 130: ADIF = 0;
-"130
-[e = _ADIF -> -> 0 `i `b ]
-[; ;adc.c: 132: if(ADFM == 1)
-"132
-[e $ ! == -> _ADFM `i -> 1 `i 164  ]
-[; ;adc.c: 133: {
-"133
-{
-[; ;adc.c: 134: adc_value_least_byte = ADRESL;
-"134
-[e = _adc_value_least_byte -> _ADRESL `ui ]
-[; ;adc.c: 135: adc_value_most_byte = ADRESH & 0x03u;
-"135
-[e = _adc_value_most_byte & -> _ADRESH `ui -> 3 `ui ]
-[; ;adc.c: 136: adc_value_most_byte <<= 8;
-"136
-[e =<< _adc_value_most_byte -> 8 `i ]
-[; ;adc.c: 137: set_adc_parameters->adc_value_channel = (adc_value_most_byte) | adc_value_least_byte;
-"137
-[e = . *U _set_adc_parameters 0 -> | _adc_value_most_byte _adc_value_least_byte `ul ]
-"138
+[e :U 153 ]
+[e $ == -> _TRMT `i -> 0 `i 154  ]
+[e :U 155 ]
+[; ;uart.c: 69: }
+"69
+[e :UE 152 ]
 }
-[; ;adc.c: 138: }
-[e $U 165  ]
-"139
-[e :U 164 ]
-[; ;adc.c: 139: else
-[; ;adc.c: 140: {
-"140
+"83
+[v _UART_Transmit_Str `(v ~T0 @X0 1 ef1`*Cuc ]
+"84
 {
-[; ;adc.c: 141: adc_value_least_byte = ADRESL & 0xC0;
-"141
-[e = _adc_value_least_byte -> & -> _ADRESL `i -> 192 `i `ui ]
-[; ;adc.c: 142: adc_value_most_byte = ADRESH ;
-"142
-[e = _adc_value_most_byte -> _ADRESH `ui ]
-[; ;adc.c: 143: adc_value_most_byte <<= 8;
-"143
-[e =<< _adc_value_most_byte -> 8 `i ]
-[; ;adc.c: 144: set_adc_parameters->adc_value_channel = adc_value_most_byte | adc_value_least_byte;
-"144
-[e = . *U _set_adc_parameters 0 -> | _adc_value_most_byte _adc_value_least_byte `ul ]
-[; ;adc.c: 145: set_adc_parameters->adc_value_channel >>= 6;
-"145
-[e =>> . *U _set_adc_parameters 0 -> 6 `i ]
-"146
+[; ;uart.c: 83: void UART_Transmit_Str(const char *transmit_str)
+[; ;uart.c: 84: {
+[e :U _UART_Transmit_Str ]
+"83
+[v _transmit_str `*Cuc ~T0 @X0 1 r1 ]
+"84
+[f ]
+[; ;uart.c: 85: while(*transmit_str)
+"85
+[e $U 157  ]
+[e :U 158 ]
+[; ;uart.c: 86: {
+"86
+{
+[; ;uart.c: 87: UART_Transmit_Char(*transmit_str);
+"87
+[e ( _UART_Transmit_Char (1 *U _transmit_str ]
+[; ;uart.c: 88: ++transmit_str;
+"88
+[e =+ _transmit_str * -> -> 1 `i `x -> -> # *U _transmit_str `i `x ]
+"89
+}
+[e :U 157 ]
+"85
+[e $ != -> *U _transmit_str `i -> -> -> 0 `i `Cuc `i 158  ]
+[e :U 159 ]
+[; ;uart.c: 89: }
+[; ;uart.c: 90: }
+"90
+[e :UE 156 ]
+}
+"105
+[v _UART_Receive_Char `(uc ~T0 @X0 1 ef ]
+"106
+{
+[; ;uart.c: 105: char UART_Receive_Char()
+[; ;uart.c: 106: {
+[e :U _UART_Receive_Char ]
+[f ]
+"107
+[v _receive_char `uc ~T0 @X0 1 a ]
+[; ;uart.c: 107: char receive_char = 0;
+[e = _receive_char -> -> 0 `i `uc ]
+"108
+[v F1831 `Cuc ~T0 @X0 -> 0 `x s framing_error_msg_disp ]
+[i F1831
+:U ..
+-> 70 `c
+-> 69 `c
+-> 82 `c
+-> 82 `c
+-> 0 `c
+..
+]
+[v F1832 `Cuc ~T0 @X0 -> 0 `x s overrun_error_msg_disp ]
+[i F1832
+:U ..
+-> 79 `c
+-> 69 `c
+-> 82 `c
+-> 82 `c
+-> 0 `c
+..
+]
+[; ;uart.c: 108: const char framing_error_msg_disp[] = "FERR", overrun_error_msg_disp[] = "OERR";
+[; ;uart.c: 111: if(OERR == 1)
+"111
+[e $ ! == -> _OERR `i -> 1 `i 161  ]
+[; ;uart.c: 112: {
+"112
+{
+[; ;uart.c: 116: Goto_XY_LCD_Disp(((4)), (1));
+"116
+[e ( _Goto_XY_LCD_Disp (2 , -> -> 4 `i `ui -> -> 1 `i `ui ]
+[; ;uart.c: 117: LCD_Disp_Str(overrun_error_msg_disp);
+"117
+[e ( _LCD_Disp_Str (1 &U F1832 ]
+[; ;uart.c: 118: UART_Transmit_Str("\rERR: OERR\r ");
+"118
+[e ( _UART_Transmit_Str (1 :s 1C ]
+[; ;uart.c: 120: CREN = 0;
+"120
+[e = _CREN -> -> 0 `i `b ]
+[; ;uart.c: 121: CREN = 1;
+"121
+[e = _CREN -> -> 1 `i `b ]
+"122
+}
+[e :U 161 ]
+[; ;uart.c: 122: }
+[; ;uart.c: 123: while(RCIF == 0);
+"123
+[e $U 162  ]
+[e :U 163 ]
+[e :U 162 ]
+[e $ == -> _RCIF `i -> 0 `i 163  ]
+[e :U 164 ]
+[; ;uart.c: 126: if(FERR == 1)
+"126
+[e $ ! == -> _FERR `i -> 1 `i 165  ]
+[; ;uart.c: 127: {
+"127
+{
+[; ;uart.c: 128: receive_char = RCREG;
+"128
+[e = _receive_char _RCREG ]
+[; ;uart.c: 132: Goto_XY_LCD_Disp(((4)), (1));
+"132
+[e ( _Goto_XY_LCD_Disp (2 , -> -> 4 `i `ui -> -> 1 `i `ui ]
+[; ;uart.c: 133: LCD_Disp_Str(framing_error_msg_disp);
+"133
+[e ( _LCD_Disp_Str (1 &U F1831 ]
+[; ;uart.c: 134: UART_Transmit_Str("\rERR: FERR\r ");
+"134
+[e ( _UART_Transmit_Str (1 :s 2C ]
+[; ;uart.c: 136: return 0;
+"136
+[e ) -> -> 0 `i `uc ]
+[e $UE 160  ]
+"137
 }
 [e :U 165 ]
-[; ;adc.c: 146: }
-[; ;adc.c: 150: break;
-"150
-[e $U 158  ]
-"151
+[; ;uart.c: 137: }
+[; ;uart.c: 138: receive_char = RCREG;
+"138
+[e = _receive_char _RCREG ]
+[; ;uart.c: 140: UART_Transmit_Char(receive_char);
+"140
+[e ( _UART_Transmit_Char (1 _receive_char ]
+[; ;uart.c: 141: return receive_char;
+"141
+[e ) _receive_char ]
+[e $UE 160  ]
+[; ;uart.c: 142: }
+"142
+[e :UE 160 ]
 }
-[; ;adc.c: 151: }
-[e $U 158  ]
-"125
-[e :U 159 ]
-[e [\ . *U _set_adc_parameters 1 , $ -> -> 0 `i `uc 160
- 158 ]
-"151
-[e :U 158 ]
-"152
-}
-[; ;adc.c: 152: }
-[e $U 166  ]
-"153
-[e :U 153 ]
-[; ;adc.c: 153: else
-[; ;adc.c: 154: {
-"154
+"370
+[v _UART_Transmit_Num `(v ~T0 @X0 1 ef2`CE1694`CS138 ]
+"371
 {
-[; ;adc.c: 156: to_disp.signed_val.val_in_bytes.value_byte[0] = adc_cur_channel;
-"156
-[e = *U + &U . . . _to_disp 1 1 0 * -> -> -> 0 `i `ui `ux -> -> # *U &U . . . _to_disp 1 1 0 `ui `ux -> _adc_cur_channel `i ]
-[; ;adc.c: 157: UART_Transmit_Str("ERR: invalid ADC channel select : ");
-"157
-[e ( _UART_Transmit_Str (1 :s 1C ]
-[; ;adc.c: 158: UART_Transmit_Num(DISP_SIGN_NUM_DIGIT2, to_disp );
-"158
-[e ( _UART_Transmit_Num (2 , . `E1694 6 _to_disp ]
-[; ;adc.c: 159: UART_Transmit_Char(('\r'));
-"159
-[e ( _UART_Transmit_Char (1 -> -> 13 `ui `uc ]
-"161
-}
-[e :U 166 ]
-"162
-}
-[; ;adc.c: 161: }
-[; ;adc.c: 162: }
-[e $U 167  ]
-"163
-[e :U 152 ]
-[; ;adc.c: 163: else
-[; ;adc.c: 164: {
-"164
+[; ;uart.c: 370: void UART_Transmit_Num(const disp_num_types uart_datanum_disp_format, const value_types uart_disp_data_int)
+[; ;uart.c: 371: {
+[e :U _UART_Transmit_Num ]
+"370
+[v _uart_datanum_disp_format `CE1694 ~T0 @X0 1 r1 ]
+[v _uart_disp_data_int `CS138 ~T0 @X0 1 r2 ]
+"371
+[f ]
+"372
+[v _tens_thousand_digit `ui ~T0 @X0 1 a ]
+[v _thousands_digit `ui ~T0 @X0 1 a ]
+[v _hundreds_digit `ui ~T0 @X0 1 a ]
+[v _tens_digit `ui ~T0 @X0 1 a ]
+[v _unit_digit `ui ~T0 @X0 1 a ]
+"373
+[v _disp_num `ul ~T0 @X0 1 a ]
+[v _num `ul ~T0 @X0 1 a ]
+[v F1843 `uc ~T0 @X0 -> 0 `x s ]
+[i F1843
+:U ..
+"374
+-> -> 48 `ui `uc
+-> -> 49 `ui `uc
+-> -> 50 `ui `uc
+-> -> 51 `ui `uc
+-> -> 52 `ui `uc
+-> -> 53 `ui `uc
+-> -> 54 `ui `uc
+-> -> 55 `ui `uc
+-> -> 56 `ui `uc
+-> -> 57 `ui `uc
+..
+]
+[v _num_data `uc ~T0 @X0 10  a ]
+[; ;uart.c: 372: unsigned int tens_thousand_digit,thousands_digit, hundreds_digit,tens_digit, unit_digit;
+[; ;uart.c: 373: unsigned long disp_num, num ;
+[; ;uart.c: 374: char num_data[] ={'0','1','2','3','4','5','6','7','8','9'};
+[e = _num_data F1843 ]
+[v F1845 `uc ~T0 @X0 -> 0 `x s ]
+[i F1845
+:U ..
+"375
+-> -> 48 `ui `uc
+-> -> 49 `ui `uc
+-> -> 50 `ui `uc
+-> -> 51 `ui `uc
+-> -> 52 `ui `uc
+-> -> 53 `ui `uc
+-> -> 54 `ui `uc
+-> -> 55 `ui `uc
+-> -> 56 `ui `uc
+-> -> 57 `ui `uc
+-> -> 65 `ui `uc
+-> -> 66 `ui `uc
+-> -> 67 `ui `uc
+-> -> 68 `ui `uc
+-> -> 69 `ui `uc
+-> -> 70 `ui `uc
+..
+]
+[v _hex_data `uc ~T0 @X0 16  a ]
+[; ;uart.c: 375: char hex_data[] ={'0','1','2','3','4','5','6','7','8','9','A','B','C','D','E','F'};
+[e = _hex_data F1845 ]
+[; ;uart.c: 378: if(uart_datanum_disp_format & 0x10 )
+"378
+[e $ ! != & -> _uart_datanum_disp_format `i -> 16 `i -> 0 `i 167  ]
+[; ;uart.c: 379: {
+"379
 {
-[; ;adc.c: 165: ADCON0 = (set_adc_parameters->adc_clk_src_type << 6)| (7 << 3) | (set_adc_parameters->volt_ref << 2) ;
-"165
-[e = _ADCON0 -> | | << -> . *U _set_adc_parameters 2 `i -> 6 `i << -> 7 `i -> 3 `i << -> . *U _set_adc_parameters 3 `i -> 2 `i `uc ]
-"166
+[; ;uart.c: 380: if(uart_disp_data_int.signed_val.value_long < 0 )
+"380
+[e $ ! < . . _uart_disp_data_int 1 0 -> -> 0 `i `l 168  ]
+[; ;uart.c: 381: {
+"381
+{
+[; ;uart.c: 382: UART_Transmit_Char('-');
+"382
+[e ( _UART_Transmit_Char (1 -> -> 45 `ui `uc ]
+[; ;uart.c: 383: disp_num = -uart_disp_data_int.signed_val.value_long;
+"383
+[e = _disp_num -> -U . . _uart_disp_data_int 1 0 `ul ]
+"384
 }
-[e :U 167 ]
-[; ;adc.c: 166: }
-[; ;adc.c: 167: break;
-"167
-[e $U 149  ]
-[; ;adc.c: 168: default:
-"168
+[; ;uart.c: 384: }
+[e $U 169  ]
+"385
 [e :U 168 ]
-[; ;adc.c: 171: UART_Transmit_Str("ERR: try to start ADC while ADC Converting \r");
-"171
-[e ( _UART_Transmit_Str (1 :s 2C ]
-"173
-}
-[; ;adc.c: 173: }
-[e $U 149  ]
-"68
-[e :U 150 ]
-[e [\ _rcvd_status , $ -> -> 110 `ui `uc 151
- 168 ]
-"173
-[e :U 149 ]
-[; ;adc.c: 175: }
-"175
-[e :UE 148 ]
-}
-"189
-[v _ADC_Disable `(v ~T0 @X0 1 ef ]
-"190
+[; ;uart.c: 385: else
+[; ;uart.c: 386: {
+"386
 {
-[; ;adc.c: 189: void ADC_Disable()
-[; ;adc.c: 190: {
-[e :U _ADC_Disable ]
-[f ]
-"191
-[v _rcvd_status `uc ~T0 @X0 1 a ]
-[; ;adc.c: 191: char rcvd_status;
-[; ;adc.c: 193: rcvd_status = Is_ADC_Converting();
-"193
-[e = _rcvd_status ( _Is_ADC_Converting ..  ]
-[; ;adc.c: 194: switch(rcvd_status)
-"194
-[e $U 171  ]
-[; ;adc.c: 195: {
-"195
-{
-[; ;adc.c: 197: case ('n'):
-"197
-[e :U 172 ]
-[; ;adc.c: 199: ADCON0bits.ADON = 0;
-"199
-[e = . . _ADCON0bits 0 0 -> -> 0 `i `uc ]
-[; ;adc.c: 200: PIE1bits.ADIE = 0;
-"200
-[e = . . _PIE1bits 0 6 -> -> 0 `i `uc ]
-[; ;adc.c: 201: adc_cur_parameters[adc_cur_channel].adc_cur_service_type = (0x02);
-"201
-[e = . *U + &U _adc_cur_parameters * -> _adc_cur_channel `ux -> -> # *U &U _adc_cur_parameters `ui `ux 1 -> -> 2 `i `uc ]
-[; ;adc.c: 208: break;
-"208
-[e $U 170  ]
-[; ;adc.c: 209: default:
-"209
-[e :U 173 ]
-[; ;adc.c: 212: UART_Transmit_Str("ERR: try to disable ADC while ADC Converting \r");
-"212
-[e ( _UART_Transmit_Str (1 :s 3C ]
-"214
+[; ;uart.c: 387: UART_Transmit_Char('+');
+"387
+[e ( _UART_Transmit_Char (1 -> -> 43 `ui `uc ]
+[; ;uart.c: 388: disp_num = uart_disp_data_int.signed_val.value_long;
+"388
+[e = _disp_num -> . . _uart_disp_data_int 1 0 `ul ]
+"389
 }
-[; ;adc.c: 214: }
+[e :U 169 ]
+"391
+}
+[; ;uart.c: 389: }
+[; ;uart.c: 391: }
 [e $U 170  ]
-"194
-[e :U 171 ]
-[e [\ _rcvd_status , $ -> -> 110 `ui `uc 172
- 173 ]
-"214
+"392
+[e :U 167 ]
+[; ;uart.c: 392: else
+[; ;uart.c: 393: {
+"393
+{
+[; ;uart.c: 394: disp_num = uart_disp_data_int.unsigned_val.value_long;
+"394
+[e = _disp_num . . _uart_disp_data_int 0 0 ]
+"395
+}
 [e :U 170 ]
-[; ;adc.c: 215: }
-"215
-[e :UE 169 ]
-}
-"229
-[v _Is_ADC_Converting `(uc ~T0 @X0 1 ef ]
-"230
+[; ;uart.c: 395: }
+[; ;uart.c: 396: num = disp_num ;
+"396
+[e = _num _disp_num ]
+[; ;uart.c: 398: switch(uart_datanum_disp_format)
+"398
+[e $U 172  ]
+[; ;uart.c: 399: {
+"399
 {
-[; ;adc.c: 229: char Is_ADC_Converting()
-[; ;adc.c: 230: {
-[e :U _Is_ADC_Converting ]
-[f ]
-[; ;adc.c: 232: if(ADCON0bits.GO == 0)
-"232
-[e $ ! == -> . . _ADCON0bits 1 1 `i -> 0 `i 175  ]
-[; ;adc.c: 233: return ('n');
-"233
-[e ) -> -> 110 `ui `uc ]
-[e $UE 174  ]
+[; ;uart.c: 400: case DISP_UNSIGN_NUM_DIGIT5:
+"400
+[e :U 173 ]
+"401
+[e :U 174 ]
+[; ;uart.c: 401: case DISP_SIGN_NUM_DIGIT5:
+[; ;uart.c: 402: num = disp_num ;
+"402
+[e = _num _disp_num ]
+[; ;uart.c: 403: tens_thousand_digit = (unsigned int)(num / (unsigned long)(10000UL));
+"403
+[e = _tens_thousand_digit -> / _num -> 10000 `ul `ui ]
+[; ;uart.c: 404: UART_Transmit_Char(num_data[tens_thousand_digit]);
+"404
+[e ( _UART_Transmit_Char (1 *U + &U _num_data * -> _tens_thousand_digit `ux -> -> # *U &U _num_data `ui `ux ]
+[; ;uart.c: 405: case DISP_UNSIGN_NUM_DIGIT4:
+"405
 [e :U 175 ]
-[; ;adc.c: 235: return ('y');
-"235
-[e ) -> -> 121 `ui `uc ]
-[e $UE 174  ]
-[; ;adc.c: 236: }
-"236
-[e :UE 174 ]
-}
-"251
-[v _Encoded_To_Actual_Analog_Val_Calc `(v ~T0 @X0 1 ef5`ul`ul`ul`C*ul`C*ul ]
-"253
-{
-[; ;adc.c: 251: void Encoded_To_Actual_Analog_Val_Calc(unsigned long adc_value, unsigned long int full_scale_analog_val,unsigned long int min_analog_val, unsigned long *const analog_val_in_digital_int, unsigned long *const analog_val_in_digital_frac )
-[; ;adc.c: 253: {
-[e :U _Encoded_To_Actual_Analog_Val_Calc ]
-"251
-[v _adc_value `ul ~T0 @X0 1 r1 ]
-[v _full_scale_analog_val `ul ~T0 @X0 1 r2 ]
-[v _min_analog_val `ul ~T0 @X0 1 r3 ]
-[v F1809 `*ul ~T0 @X0 1 t ]
-[v _analog_val_in_digital_int `C*ul ~T0 @X0 1 r4 ]
-[v F1811 `*ul ~T0 @X0 1 t ]
-[v _analog_val_in_digital_frac `C*ul ~T0 @X0 1 r5 ]
-"253
-[f ]
-"254
-[v _temp_val_1 `ul ~T0 @X0 1 a ]
-[v _temp_val_10 `ul ~T0 @X0 1 a ]
-[v _temp_val_100 `ul ~T0 @X0 1 a ]
-[v _temp_val_1000 `ul ~T0 @X0 1 a ]
-[v _remainder_val `ul ~T0 @X0 1 a ]
-[v _temp_remainder_val `ul ~T0 @X0 1 a ]
-[v _remainder_val_1 `ul ~T0 @X0 1 a ]
-[v _remainder_val_10 `ul ~T0 @X0 1 a ]
-[; ;adc.c: 254: unsigned long temp_val_1, temp_val_10, temp_val_100, temp_val_1000, remainder_val, temp_remainder_val, remainder_val_1, remainder_val_10;
-[; ;adc.c: 258: if(full_scale_analog_val < 65 )
-"258
-[e $ ! < _full_scale_analog_val -> -> -> 65 `i `l `ul 177  ]
-[; ;adc.c: 259: {
-"259
-{
-[; ;adc.c: 260: temp_val_1 = ((full_scale_analog_val * adc_value) / (1023UL)) ;
-"260
-[e = _temp_val_1 / * _full_scale_analog_val _adc_value -> 1023 `ul ]
-[; ;adc.c: 261: *analog_val_in_digital_int = temp_val_1 + min_analog_val;
-"261
-[e = *U _analog_val_in_digital_int + _temp_val_1 _min_analog_val ]
-[; ;adc.c: 262: remainder_val = (full_scale_analog_val * adc_value) % (1023UL);
-"262
-[e = _remainder_val % * _full_scale_analog_val _adc_value -> 1023 `ul ]
-[; ;adc.c: 263: remainder_val_1 = ((remainder_val * 10) / (1023UL));
-"263
-[e = _remainder_val_1 / * _remainder_val -> -> -> 10 `i `l `ul -> 1023 `ul ]
-[; ;adc.c: 264: temp_remainder_val = ((remainder_val * 10) % (1023UL));
-"264
-[e = _temp_remainder_val % * _remainder_val -> -> -> 10 `i `l `ul -> 1023 `ul ]
-[; ;adc.c: 265: remainder_val_10 = ((temp_remainder_val * 10) / (1023UL));
-"265
-[e = _remainder_val_10 / * _temp_remainder_val -> -> -> 10 `i `l `ul -> 1023 `ul ]
-[; ;adc.c: 266: *analog_val_in_digital_frac = (remainder_val_1 * 100 )+ remainder_val_10 * 10 ;
-"266
-[e = *U _analog_val_in_digital_frac + * _remainder_val_1 -> -> -> 100 `i `l `ul * _remainder_val_10 -> -> -> 10 `i `l `ul ]
-[; ;adc.c: 267: return;
-"267
-[e $UE 176  ]
-"268
-}
+"406
+[e :U 176 ]
+[; ;uart.c: 406: case DISP_SIGN_NUM_DIGIT4:
+[; ;uart.c: 407: num = disp_num % 10000UL;
+"407
+[e = _num % _disp_num -> 10000 `ul ]
+[; ;uart.c: 408: thousands_digit = (unsigned int)(num / (unsigned long)(1000UL));
+"408
+[e = _thousands_digit -> / _num -> 1000 `ul `ui ]
+[; ;uart.c: 409: UART_Transmit_Char(num_data[thousands_digit]);
+"409
+[e ( _UART_Transmit_Char (1 *U + &U _num_data * -> _thousands_digit `ux -> -> # *U &U _num_data `ui `ux ]
+[; ;uart.c: 410: case DISP_UNSIGN_NUM_DIGIT3:
+"410
 [e :U 177 ]
-[; ;adc.c: 268: }
-[; ;adc.c: 270: *analog_val_in_digital_int = 0;
-"270
-[e = *U _analog_val_in_digital_int -> -> -> 0 `i `l `ul ]
-[; ;adc.c: 271: *analog_val_in_digital_frac = 0;
-"271
-[e = *U _analog_val_in_digital_frac -> -> -> 0 `i `l `ul ]
-[; ;adc.c: 272: }
-"272
-[e :UE 176 ]
-}
-"286
-[v _Encoded_To_Percent_Calc `(v ~T0 @X0 1 ef3`ul`C*ui`C*ui ]
-"287
-{
-[; ;adc.c: 286: void Encoded_To_Percent_Calc(unsigned long adc_value, unsigned int *const percent_int, unsigned int *const percent_frac )
-[; ;adc.c: 287: {
-[e :U _Encoded_To_Percent_Calc ]
-"286
-[v _adc_value `ul ~T0 @X0 1 r1 ]
-[v F1822 `*ui ~T0 @X0 1 t ]
-[v _percent_int `C*ui ~T0 @X0 1 r2 ]
-[v F1824 `*ui ~T0 @X0 1 t ]
-[v _percent_frac `C*ui ~T0 @X0 1 r3 ]
-"287
-[f ]
-"288
-[v _remainder_val_1 `ui ~T0 @X0 1 a ]
-"289
-[v _temp_percent_int `ul ~T0 @X0 1 a ]
-[; ;adc.c: 288: unsigned int remainder_val_1;
-[; ;adc.c: 289: unsigned long temp_percent_int;
-[; ;adc.c: 292: temp_percent_int = (100 * adc_value);
-"292
-[e = _temp_percent_int * -> -> -> 100 `i `l `ul _adc_value ]
-[; ;adc.c: 293: *percent_int = (100 * adc_value) / (1023UL);
-"293
-[e = *U _percent_int -> / * -> -> -> 100 `i `l `ul _adc_value -> 1023 `ul `ui ]
-[; ;adc.c: 294: remainder_val_1 = temp_percent_int % (1023UL);
-"294
-[e = _remainder_val_1 -> % _temp_percent_int -> 1023 `ul `ui ]
-[; ;adc.c: 295: *percent_frac = (remainder_val_1 * 10) / (1023UL);
-"295
-[e = *U _percent_frac -> / -> * _remainder_val_1 -> -> 10 `i `ui `ul -> 1023 `ul `ui ]
-[; ;adc.c: 296: }
-"296
-[e :UE 178 ]
-}
-"311
-[v _Actual_Analog_Val_To_Encoded_Calc `(v ~T0 @X0 1 ef4`Cul`ul`ul`C*ul ]
-"313
-{
-[; ;adc.c: 311: void Actual_Analog_Val_To_Encoded_Calc(const unsigned long actual_analog_val, unsigned long int full_scale_analog_val, unsigned long int min_analog_val, unsigned long *const encoded_val)
-[; ;adc.c: 313: {
-[e :U _Actual_Analog_Val_To_Encoded_Calc ]
-"311
-[v _actual_analog_val `Cul ~T0 @X0 1 r1 ]
-[v _full_scale_analog_val `ul ~T0 @X0 1 r2 ]
-[v _min_analog_val `ul ~T0 @X0 1 r3 ]
-[v _encoded_val `C*ul ~T0 @X0 1 r4 ]
-"313
-[f ]
-"314
-[v _remainder_val_1 `ul ~T0 @X0 1 a ]
-"315
-[v _temp_encoded_int `ul ~T0 @X0 1 a ]
-[; ;adc.c: 314: unsigned long remainder_val_1;
-[; ;adc.c: 315: unsigned long temp_encoded_int;
-[; ;adc.c: 317: if(actual_analog_val < 65)
-"317
-[e $ ! < _actual_analog_val -> -> -> 65 `i `l `ul 180  ]
-[; ;adc.c: 318: {
-"318
-{
-[; ;adc.c: 319: *encoded_val = ((actual_analog_val * (1023UL)) / full_scale_analog_val) - min_analog_val;
-"319
-[e = *U _encoded_val - / * _actual_analog_val -> 1023 `ul _full_scale_analog_val _min_analog_val ]
-[; ;adc.c: 320: return;
-"320
-[e $UE 179  ]
-"321
-}
+"411
+[e :U 178 ]
+[; ;uart.c: 411: case DISP_SIGN_NUM_DIGIT3:
+[; ;uart.c: 412: num = disp_num % 1000UL;
+"412
+[e = _num % _disp_num -> 1000 `ul ]
+[; ;uart.c: 413: hundreds_digit = (unsigned int) (num / (unsigned long) (100));
+"413
+[e = _hundreds_digit -> / _num -> -> 100 `i `ul `ui ]
+[; ;uart.c: 414: UART_Transmit_Char(num_data[hundreds_digit]);
+"414
+[e ( _UART_Transmit_Char (1 *U + &U _num_data * -> _hundreds_digit `ux -> -> # *U &U _num_data `ui `ux ]
+[; ;uart.c: 415: case DISP_UNSIGN_NUM_DIGIT2:
+"415
+[e :U 179 ]
+"416
 [e :U 180 ]
-[; ;adc.c: 321: }
-[; ;adc.c: 323: *encoded_val = 0;
-"323
-[e = *U _encoded_val -> -> -> 0 `i `l `ul ]
-[; ;adc.c: 324: }
-"324
-[e :UE 179 ]
+[; ;uart.c: 416: case DISP_SIGN_NUM_DIGIT2:
+[; ;uart.c: 417: num = disp_num % 100;
+"417
+[e = _num % _disp_num -> -> -> 100 `i `l `ul ]
+[; ;uart.c: 418: tens_digit = (unsigned int) (num / 10);
+"418
+[e = _tens_digit -> / _num -> -> -> 10 `i `l `ul `ui ]
+[; ;uart.c: 419: UART_Transmit_Char(num_data[tens_digit]);
+"419
+[e ( _UART_Transmit_Char (1 *U + &U _num_data * -> _tens_digit `ux -> -> # *U &U _num_data `ui `ux ]
+[; ;uart.c: 420: case DISP_UNSIGN_NUM_DIGIT1:
+"420
+[e :U 181 ]
+"421
+[e :U 182 ]
+[; ;uart.c: 421: case DISP_SIGN_NUM_DIGIT1:
+[; ;uart.c: 422: unit_digit = (unsigned int) (disp_num % 10);
+"422
+[e = _unit_digit -> % _disp_num -> -> -> 10 `i `l `ul `ui ]
+[; ;uart.c: 423: UART_Transmit_Char(num_data[unit_digit]);
+"423
+[e ( _UART_Transmit_Char (1 *U + &U _num_data * -> _unit_digit `ux -> -> # *U &U _num_data `ui `ux ]
+[; ;uart.c: 424: break;
+"424
+[e $U 171  ]
+[; ;uart.c: 425: case DISP_HEX_DIGIT4:
+"425
+[e :U 183 ]
+[; ;uart.c: 428: thousands_digit = (num / (unsigned long) (16 * 16 * 16));
+"428
+[e = _thousands_digit -> / _num -> * * -> 16 `i -> 16 `i -> 16 `i `ul `ui ]
+[; ;uart.c: 429: UART_Transmit_Char(hex_data[thousands_digit]);
+"429
+[e ( _UART_Transmit_Char (1 *U + &U _hex_data * -> _thousands_digit `ux -> -> # *U &U _hex_data `ui `ux ]
+[; ;uart.c: 430: case DISP_HEX_DIGIT3:
+"430
+[e :U 184 ]
+[; ;uart.c: 431: num = disp_num %(unsigned long)(16 * 16 * 16);
+"431
+[e = _num % _disp_num -> * * -> 16 `i -> 16 `i -> 16 `i `ul ]
+[; ;uart.c: 432: hundreds_digit = (unsigned int) (num / (unsigned long) (16 * 16));
+"432
+[e = _hundreds_digit -> / _num -> * -> 16 `i -> 16 `i `ul `ui ]
+[; ;uart.c: 433: UART_Transmit_Char(hex_data[hundreds_digit]);
+"433
+[e ( _UART_Transmit_Char (1 *U + &U _hex_data * -> _hundreds_digit `ux -> -> # *U &U _hex_data `ui `ux ]
+[; ;uart.c: 434: case DISP_HEX_DIGIT2:
+"434
+[e :U 185 ]
+[; ;uart.c: 435: num = disp_num %(unsigned long)(16 * 16);
+"435
+[e = _num % _disp_num -> * -> 16 `i -> 16 `i `ul ]
+[; ;uart.c: 436: tens_digit = (unsigned int) (num / 16);
+"436
+[e = _tens_digit -> / _num -> -> -> 16 `i `l `ul `ui ]
+[; ;uart.c: 437: UART_Transmit_Char(hex_data[tens_digit]);
+"437
+[e ( _UART_Transmit_Char (1 *U + &U _hex_data * -> _tens_digit `ux -> -> # *U &U _hex_data `ui `ux ]
+[; ;uart.c: 438: case DISP_HEX_DIGIT1:
+"438
+[e :U 186 ]
+[; ;uart.c: 439: unit_digit = (unsigned int) (disp_num % 16);
+"439
+[e = _unit_digit -> % _disp_num -> -> -> 16 `i `l `ul `ui ]
+[; ;uart.c: 440: UART_Transmit_Char(hex_data[unit_digit]);
+"440
+[e ( _UART_Transmit_Char (1 *U + &U _hex_data * -> _unit_digit `ux -> -> # *U &U _hex_data `ui `ux ]
+[; ;uart.c: 441: break;
+"441
+[e $U 171  ]
+"443
 }
-[a 1C 69 82 82 58 32 105 110 118 97 108 105 100 32 65 68 67 32 99 104 97 110 110 101 108 32 115 101 108 101 99 116 32 58 32 0 ]
-[a 2C 69 82 82 58 32 116 114 121 32 116 111 32 115 116 97 114 116 32 65 68 67 32 119 104 105 108 101 32 65 68 67 32 67 111 110 118 101 114 116 105 110 103 32 13 0 ]
-[a 3C 69 82 82 58 32 116 114 121 32 116 111 32 100 105 115 97 98 108 101 32 65 68 67 32 119 104 105 108 101 32 65 68 67 32 67 111 110 118 101 114 116 105 110 103 32 13 0 ]
+[; ;uart.c: 443: }
+[e $U 171  ]
+"398
+[e :U 172 ]
+[e [\ _uart_datanum_disp_format , $ . `E1694 4 173
+ , $ . `E1694 9 174
+ , $ . `E1694 3 175
+ , $ . `E1694 8 176
+ , $ . `E1694 2 177
+ , $ . `E1694 7 178
+ , $ . `E1694 1 179
+ , $ . `E1694 6 180
+ , $ . `E1694 0 181
+ , $ . `E1694 5 182
+ , $ . `E1694 13 183
+ , $ . `E1694 12 184
+ , $ . `E1694 11 185
+ , $ . `E1694 10 186
+ 171 ]
+"443
+[e :U 171 ]
+[; ;uart.c: 444: }
+"444
+[e :UE 166 ]
+}
+[a 1C 13 69 82 82 58 32 79 69 82 82 13 32 0 ]
+[a 2C 13 69 82 82 58 32 70 69 82 82 13 32 0 ]
