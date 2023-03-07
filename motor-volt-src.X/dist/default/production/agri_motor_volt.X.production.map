@@ -1,0 +1,1342 @@
+Microchip MPLAB XC8 Compiler V1.44 ()
+
+Linker command line:
+
+-W-3 --edf=C:\Program Files\Microchip\xc8\v1.44\dat\en_msgs.txt -cs \
+  -h+dist/default/production\agri_motor_volt.X.production.sym \
+  --cmf=dist/default/production\agri_motor_volt.X.production.cmf -z \
+  -Q16F887 -oC:\Users\Arun\AppData\Local\Temp\s7k8.2 \
+  -Mdist/default/production/agri_motor_volt.X.production.map -E1 -ver=XC8 \
+  -ASTACK=0DDh-0efh -pstack=STACK -ACODE=00h-07FFhx4 -ASTRCODE=00h-01FFFh \
+  -ASTRING=00h-0FFhx32 -ACONST=00h-0FFhx32 -AENTRY=00h-0FFhx32 \
+  -ACOMMON=070h-07Fh -ABANK0=020h-06Fh -ABANK1=0A0h-0EFh \
+  -ABANK2=0110h-016Fh -ABANK3=0190h-01EFh \
+  -ARAM=020h-06Fh,0A0h-0EFh,0110h-016Fh,0190h-01EFh \
+  -AABS1=020h-07Fh,0A0h-0EFh,0110h-016Fh,0190h-01EFh -ASFR0=00h-01Fh \
+  -ASFR1=080h-09Fh -ASFR2=0100h-010Fh -ASFR3=0180h-018Fh \
+  -preset_vec=00h,intentry=04h,init,end_init -ppowerup=CODE -pcinit=CODE \
+  -pfunctab=ENTRY -ACONFIG=02007h-02008h -pconfig=CONFIG -DCONFIG=2 \
+  -AIDLOC=02000h-02003h -pidloc=IDLOC -DIDLOC=2 -AEEDATA=00h-0FFh/02100h \
+  -peeprom_data=EEDATA -DEEDATA=2 -DCODE=2 -DSTRCODE=2 -DSTRING=2 -DCONST=2 \
+  -DENTRY=2 -k C:\Users\Arun\AppData\Local\Temp\s7k8.obj \
+  dist/default/production\agri_motor_volt.X.production.obj 
+
+Object code version is 3.11
+
+Machine type is 16F887
+
+
+
+                Name                               Link     Load   Length Selector   Space Scale
+C:\Users\Arun\AppData\Local\Temp\s7k8.obj
+                end_init                             12       12        3        8       0
+                reset_vec                             0        0        3        0       0
+                config                             2007     2007        2     400E       0
+dist/default/production\agri_motor_volt.X.production.obj
+                cinit                                15       15       4D        8       0
+                intentry                              4        4        E        8       0
+                text18                              844      844        1     1088       0
+                text17                                3        3        1        0       0
+                text16                              7FF      7FF        1        8       0
+                text15                              872      872        F     10E4       0
+                text14                              881      881       11     1102       0
+                text13                              A3D      A3D      180     147A       0
+                text12                              892      892       13     1124       0
+                text11                              9DC      9DC       61     13B8       0
+                text10                              84A      84A        8     1094       0
+                text9                               85A      85A        A     10B4       0
+                text8                               97C      97C       60     12F8       0
+                text7                               92E      92E       4E     125C       0
+                text6                               452      452      372        8       0
+                text5                               8C8      8C8       25     1190       0
+                text4                               BBD      BBD      190     177A       0
+                text3                               8ED      8ED       41     11DA       0
+                text2                               D4D      D4D      2B3     1A9A       0
+                text1                               8A5      8A5       23     114A       0
+                maintext                             62       62      3F0        8       0
+                cstackBANK0                          20       20       30       20       1
+                cstackCOMMON                         70       70        8       70       1
+                cstackBANK1                          A0       A0       3D       A0       1
+                cstackBANK2                         13A      13A       23      110       1
+                clrtext                             852      852        8     10A4       0
+                inittext                            7EE      7EE       11        8       0
+                dataBANK2                           110      110       2A      110       1
+                dataBANK3                           1DB      1DB        E      190       1
+                bssBANK3                            190      190       4B      190       1
+                bssBANK0                             50       50       10       20       1
+                dataCOMMON                           78       78        5       70       1
+                bssCOMMON                            7D       7D        1       70       1
+                stringtext                         1000     1000      197       20       0
+                idataBANK3                          864      864        E     10C8       0
+                idataBANK2                          7C4      7C4       2A        8       0
+                idataCOMMON                         845      845        5     108A       0
+
+TOTAL           Name                               Link     Load   Length     Space
+        CLASS   STACK          
+
+        CLASS   CODE           
+                end_init                             12       12        3         0
+                cinit                                15       15       4D         0
+                intentry                              4        4        E         0
+                reset_vec                             0        0        3         0
+                text18                              844      844        1         0
+                text17                                3        3        1         0
+                text16                              7FF      7FF        1         0
+                text15                              872      872        F         0
+                text14                              881      881       11         0
+                text13                              A3D      A3D      180         0
+                text12                              892      892       13         0
+                text11                              9DC      9DC       61         0
+                text10                              84A      84A        8         0
+                text9                               85A      85A        A         0
+                text8                               97C      97C       60         0
+                text7                               92E      92E       4E         0
+                text6                               452      452      372         0
+                text5                               8C8      8C8       25         0
+                text4                               BBD      BBD      190         0
+                text3                               8ED      8ED       41         0
+                text2                               D4D      D4D      2B3         0
+                text1                               8A5      8A5       23         0
+                maintext                             62       62      3F0         0
+                clrtext                             852      852        8         0
+                inittext                            7EE      7EE       11         0
+                idataBANK3                          864      864        E         0
+                idataBANK2                          7C4      7C4       2A         0
+                idataCOMMON                         845      845        5         0
+
+        CLASS   STRCODE        
+                stringtext                         1000     1000      197         0
+
+        CLASS   STRING         
+
+        CLASS   CONST          
+
+        CLASS   ENTRY          
+
+        CLASS   COMMON         
+                cstackCOMMON                         70       70        8         1
+                dataCOMMON                           78       78        5         1
+                bssCOMMON                            7D       7D        1         1
+
+        CLASS   BANK0          
+                cstackBANK0                          20       20       30         1
+                bssBANK0                             50       50       10         1
+
+        CLASS   BANK1          
+                cstackBANK1                          A0       A0       3D         1
+
+        CLASS   BANK2          
+                cstackBANK2                         13A      13A       23         1
+                dataBANK2                           110      110       2A         1
+
+        CLASS   BANK3          
+                dataBANK3                           1DB      1DB        E         1
+                bssBANK3                            190      190       4B         1
+
+        CLASS   RAM            
+
+        CLASS   ABS1           
+                abs_s1                               7E       7E        2         1
+
+        CLASS   SFR0           
+
+        CLASS   SFR1           
+
+        CLASS   SFR2           
+
+        CLASS   SFR3           
+
+        CLASS   CONFIG         
+                config                             2007     2007        2         0
+
+        CLASS   IDLOC          
+
+        CLASS   EEDATA         
+
+
+
+SEGMENTS        Name                           Load    Length   Top    Selector   Space  Class     Delta
+
+                reset_vec                      000000  000004  000004         0       0  CODE        2
+                intentry                       000004  0007FC  000800         8       0  CODE        2
+                cstackBANK0                    000020  000040  000060        20       1  BANK0       1
+                cstackCOMMON                   000070  00000E  00007E        70       1  COMMON      1
+                cstackBANK1                    0000A0  00003D  0000DD        A0       1  BANK1       1
+                dataBANK2                      000110  00004D  00015D       110       1  BANK2       1
+                bssBANK3                       000190  000059  0001E9       190       1  BANK3       1
+                text18                         000844  000001  000845      1088       0  CODE        2
+                idataCOMMON                    000845  000005  00084A      108A       0  CODE        2
+                text10                         00084A  000008  000852      1094       0  CODE        2
+                clrtext                        000852  000008  00085A      10A4       0  CODE        2
+                text9                          00085A  00000A  000864      10B4       0  CODE        2
+                idataBANK3                     000864  00000E  000872      10C8       0  CODE        2
+                text15                         000872  00000F  000881      10E4       0  CODE        2
+                text14                         000881  000011  000892      1102       0  CODE        2
+                text12                         000892  000013  0008A5      1124       0  CODE        2
+                text1                          0008A5  000023  0008C8      114A       0  CODE        2
+                text5                          0008C8  000025  0008ED      1190       0  CODE        2
+                text3                          0008ED  000041  00092E      11DA       0  CODE        2
+                text7                          00092E  00004E  00097C      125C       0  CODE        2
+                text8                          00097C  000060  0009DC      12F8       0  CODE        2
+                text11                         0009DC  000061  000A3D      13B8       0  CODE        2
+                text13                         000A3D  000180  000BBD      147A       0  CODE        2
+                text4                          000BBD  000190  000D4D      177A       0  CODE        2
+                text2                          000D4D  0002B3  001000      1A9A       0  CODE        2
+                stringtext                     001000  000197  001197        20       0  STRCODE     2
+                config                         002007  000002  002009      400E       0  CONFIG      2
+
+
+UNUSED ADDRESS RANGES
+
+        Name                Unused          Largest block    Delta
+        BANK0            0060-006F             10           1
+        BANK1            00DD-00EF             13           1
+        BANK2            015D-016F             13           1
+        BANK3            01E9-01EF              7           1
+        CODE             0800-0843             44           2
+                         1197-1FFF            669
+        CONST            0800-0843             44           2
+                         1197-1FFF            100
+        EEDATA           2100-21FF            100           2
+        ENTRY            0800-0843             44           2
+                         1197-1FFF            100
+        IDLOC            2000-2003              4           2
+        RAM              0060-006F             10           1
+                         00DD-00EF             13
+                         015D-016F             13
+                         01E9-01EF              7
+        SFR0             0000-001F             20           1
+        SFR1             0080-009F             20           1
+        SFR2             0100-010F             10           1
+        SFR3             0180-018F             10           1
+        STACK            00DD-00EF             13           1
+        STRCODE          0800-0843             44           2
+                         1197-1FFF            E69
+        STRING           0800-0843             44           2
+                         1197-1FFF            100
+
+                                  Symbol Table
+
+?___lldiv                                                    cstackBANK0  003A
+?___llmod                                                    cstackBANK0  003A
+?___lmul                                                     cstackBANK0  002D
+ADC_Conf_Channel@set_adc_cur_channel                         cstackBANK0  0032
+ADC_Start_Conv@adc_value_least_byte                          cstackBANK1  00D4
+ADC_Start_Conv@adc_value_most_byte                           cstackBANK1  00D6
+ADC_Start_Conv@rcvd_status                                   cstackBANK1  00D3
+ADC_Start_Conv@set_adc_parameters                            cstackBANK1  00D8
+Encoded_To_Actual_Analog_Val_Calc@adc_value                  cstackBANK1  00A0
+Encoded_To_Actual_Analog_Val_Calc@analog_val_in_digital_frac cstackBANK1  00AD
+Encoded_To_Actual_Analog_Val_Calc@analog_val_in_digital_int  cstackBANK1  00AC
+Encoded_To_Actual_Analog_Val_Calc@full_scale_analog_val      cstackBANK1  00A4
+Encoded_To_Actual_Analog_Val_Calc@min_analog_val             cstackBANK1  00A8
+Encoded_To_Actual_Analog_Val_Calc@remainder_val              cstackBANK1  00BE
+Encoded_To_Actual_Analog_Val_Calc@remainder_val_1            cstackBANK1  00B6
+Encoded_To_Actual_Analog_Val_Calc@remainder_val_10           cstackBANK1  00BA
+Encoded_To_Actual_Analog_Val_Calc@temp_remainder_val         cstackBANK1  00B2
+Encoded_To_Actual_Analog_Val_Calc@temp_val_1                 cstackBANK1  00AE
+Interrupt_ISR@adc_value_least_byte                           cstackCOMMON 0074
+Interrupt_ISR@adc_value_most_byte                            cstackCOMMON 0076
+LCD_Disp_Num@F1879                                           dataBANK3    01DB
+LCD_Disp_Num@F1881                                           dataBANK2    0120
+UART_Receive_Char@framing_error_msg_disp                     stringtext   1017
+UART_Receive_Char@overrun_error_msg_disp                     stringtext   1012
+UART_Transmit_Char@transmit_char                             cstackBANK0  002D
+UART_Transmit_Num@F1843                                      dataBANK2    0130
+UART_Transmit_Num@F1845                                      dataBANK2    0110
+UART_Transmit_Num@disp_num                                   cstackBANK1  00C9
+UART_Transmit_Num@hex_data                                   cstackBANK1  00A0
+UART_Transmit_Num@hundreds_digit                             cstackBANK1  00BF
+UART_Transmit_Num@num                                        cstackBANK1  00C5
+UART_Transmit_Num@num_data                                   cstackBANK1  00B0
+UART_Transmit_Num@tens_digit                                 cstackBANK1  00C1
+UART_Transmit_Num@tens_thousand_digit                        cstackBANK1  00BA
+UART_Transmit_Num@thousands_digit                            cstackBANK1  00BD
+UART_Transmit_Num@uart_datanum_disp_format                   cstackBANK1  00BC
+UART_Transmit_Num@uart_disp_data_int                         cstackBANK0  0048
+UART_Transmit_Num@unit_digit                                 cstackBANK1  00C3
+UART_Transmit_Str@transmit_str                               cstackBANK0  002E
+_ADCON0                                                      (abs)        001F
+_ADCON0bits                                                  (abs)        001F
+_ADCON1                                                      (abs)        009F
+_ADC_Conf_Channel                                            text11       09DC
+_ADC_Conv_Over_Appl_Proc                                     text18       0844
+_ADC_Start_Conv                                              text4        0BBD
+_ADFM                                                        (abs)        04FF
+_ADIF                                                        (abs)        0066
+_ADRESH                                                      (abs)        001E
+_ADRESL                                                      (abs)        009E
+_ANSEL                                                       (abs)        0188
+_ANSELH                                                      (abs)        0189
+_BRG16                                                       (abs)        0C3B
+_BRGH                                                        (abs)        04C2
+_CREN                                                        (abs)        00C4
+_Encoded_To_Actual_Analog_Val_Calc                           text2        0D4D
+_External_Interrupt_Occured_Appl_Proc                        text17       0003
+_FERR                                                        (abs)        00C2
+_GO                                                          (abs)        00F9
+_INTCONbits                                                  (abs)        000B
+_INTE                                                        (abs)        005C
+_INTF                                                        (abs)        0059
+_Interrupt_ISR                                               text13       0A3D
+_Is_ADC_Converting                                           text10       084A
+_OERR                                                        (abs)        00C1
+_PIE1bits                                                    (abs)        008C
+_PORTD                                                       (abs)        0008
+_RB1                                                         (abs)        0031
+_RB2                                                         (abs)        0032
+_RB3                                                         (abs)        0033
+_RCIE                                                        (abs)        0465
+_RCIF                                                        (abs)        0065
+_RCREG                                                       (abs)        001A
+_RE0                                                         (abs)        0048
+_RE1                                                         (abs)        0049
+_RE2                                                         (abs)        004A
+_RX9                                                         (abs)        00C6
+_SPBRG                                                       (abs)        0099
+_SPEN                                                        (abs)        00C7
+_SREN                                                        (abs)        00C5
+_SYNC                                                        (abs)        04C4
+_T1CKPS0                                                     (abs)        0084
+_T1CKPS1                                                     (abs)        0085
+_T1CON                                                       (abs)        0010
+_T1CONbits                                                   (abs)        0010
+_T2CKPS0                                                     (abs)        0090
+_T2CKPS1                                                     (abs)        0091
+_T2CON                                                       (abs)        0012
+_T2CONbits                                                   (abs)        0012
+_TMR1                                                        (abs)        000E
+_TMR1H                                                       (abs)        000F
+_TMR1IF                                                      (abs)        0060
+_TMR1L                                                       (abs)        000E
+_TMR2                                                        (abs)        0011
+_TMR2IF                                                      (abs)        0061
+_TRISBbits                                                   (abs)        0086
+_TRISD                                                       (abs)        0088
+_TRISDbits                                                   (abs)        0088
+_TRISEbits                                                   (abs)        0089
+_TRMT                                                        (abs)        04C1
+_TX9                                                         (abs)        04C6
+_TXEN                                                        (abs)        04C5
+_TXIE                                                        (abs)        0464
+_TXREG                                                       (abs)        0019
+_Timer1_Req_Time_Expiry_Appl_Proc                            text16       07FF
+_Timer1_Stop                                                 text15       0872
+_UART_Init                                                   text1        08A5
+_UART_Transmit_Char                                          text9        085A
+_UART_Transmit_Num                                           text6        0452
+_UART_Transmit_Str                                           text5        08C8
+__CFG_BOR4V$BOR40V                                           (abs)        0000
+__CFG_BOREN$OFF                                              (abs)        0000
+__CFG_CP$OFF                                                 (abs)        0000
+__CFG_CPD$OFF                                                (abs)        0000
+__CFG_FCMEN$ON                                               (abs)        0000
+__CFG_FOSC$INTRC_NOCLKOUT                                    (abs)        0000
+__CFG_IESO$ON                                                (abs)        0000
+__CFG_LVP$OFF                                                (abs)        0000
+__CFG_MCLRE$ON                                               (abs)        0000
+__CFG_PWRTE$ON                                               (abs)        0000
+__CFG_WDTE$OFF                                               (abs)        0000
+__CFG_WRT$OFF                                                (abs)        0000
+__Habs1                                                      abs1         0000
+__Hbank0                                                     bank0        0000
+__Hbank1                                                     bank1        0000
+__Hbank2                                                     bank2        0000
+__Hbank3                                                     bank3        0000
+__HbssBANK0                                                  bssBANK0     0000
+__HbssBANK3                                                  bssBANK3     0000
+__HbssCOMMON                                                 bssCOMMON    0000
+__Hcinit                                                     cinit        0062
+__Hclrtext                                                   clrtext      0000
+__Hcode                                                      code         0000
+__Hcommon                                                    common       0000
+__Hconfig                                                    config       2009
+__HcstackBANK0                                               cstackBANK0  0000
+__HcstackBANK1                                               cstackBANK1  0000
+__HcstackBANK2                                               cstackBANK2  0000
+__HcstackCOMMON                                              cstackCOMMON 0000
+__HdataBANK2                                                 dataBANK2    0000
+__HdataBANK3                                                 dataBANK3    0000
+__HdataCOMMON                                                dataCOMMON   0000
+__Heeprom_data                                               eeprom_data  0000
+__Hend_init                                                  end_init     0015
+__Hfunctab                                                   functab      0000
+__HidataBANK2                                                idataBANK2   0000
+__HidataBANK3                                                idataBANK3   0000
+__HidataCOMMON                                               idataCOMMON  0000
+__Hidloc                                                     idloc        0000
+__Hinit                                                      init         0012
+__Hinittext                                                  inittext     0000
+__Hintentry                                                  intentry     0012
+__Hmaintext                                                  maintext     0000
+__Hpowerup                                                   powerup      0000
+__Hram                                                       ram          0000
+__Hreset_vec                                                 reset_vec    0003
+__Hsfr0                                                      sfr0         0000
+__Hsfr1                                                      sfr1         0000
+__Hsfr2                                                      sfr2         0000
+__Hsfr3                                                      sfr3         0000
+__Hspace_0                                                   (abs)        2009
+__Hspace_1                                                   (abs)        01E9
+__Hspace_2                                                   (abs)        0000
+__Hspace_3                                                   (abs)        0000
+__Hstack                                                     stack        0000
+__Hstrings                                                   strings      0000
+__Hstringtext                                                stringtext   0000
+__Htext                                                      text         0000
+__Labs1                                                      abs1         0000
+__Lbank0                                                     bank0        0000
+__Lbank1                                                     bank1        0000
+__Lbank2                                                     bank2        0000
+__Lbank3                                                     bank3        0000
+__LbssBANK0                                                  bssBANK0     0000
+__LbssBANK3                                                  bssBANK3     0000
+__LbssCOMMON                                                 bssCOMMON    0000
+__Lcinit                                                     cinit        0015
+__Lclrtext                                                   clrtext      0000
+__Lcode                                                      code         0000
+__Lcommon                                                    common       0000
+__Lconfig                                                    config       2007
+__LcstackBANK0                                               cstackBANK0  0000
+__LcstackBANK1                                               cstackBANK1  0000
+__LcstackBANK2                                               cstackBANK2  0000
+__LcstackCOMMON                                              cstackCOMMON 0000
+__LdataBANK2                                                 dataBANK2    0000
+__LdataBANK3                                                 dataBANK3    0000
+__LdataCOMMON                                                dataCOMMON   0000
+__Leeprom_data                                               eeprom_data  0000
+__Lend_init                                                  end_init     0012
+__Lfunctab                                                   functab      0000
+__LidataBANK2                                                idataBANK2   0000
+__LidataBANK3                                                idataBANK3   0000
+__LidataCOMMON                                               idataCOMMON  0000
+__Lidloc                                                     idloc        0000
+__Linit                                                      init         0012
+__Linittext                                                  inittext     0000
+__Lintentry                                                  intentry     0004
+__Lmaintext                                                  maintext     0000
+__Lpowerup                                                   powerup      0000
+__Lram                                                       ram          0000
+__Lreset_vec                                                 reset_vec    0000
+__Lsfr0                                                      sfr0         0000
+__Lsfr1                                                      sfr1         0000
+__Lsfr2                                                      sfr2         0000
+__Lsfr3                                                      sfr3         0000
+__Lspace_0                                                   (abs)        0000
+__Lspace_1                                                   (abs)        0000
+__Lspace_2                                                   (abs)        0000
+__Lspace_3                                                   (abs)        0000
+__Lstack                                                     stack        0000
+__Lstrings                                                   strings      0000
+__Lstringtext                                                stringtext   0000
+__Ltext                                                      text         0000
+__S0                                                         (abs)        2009
+__S1                                                         (abs)        01E9
+__S2                                                         (abs)        0000
+__S3                                                         (abs)        0000
+___bmul                                                      text12       0892
+___bmul@multiplicand                                         cstackBANK0  002D
+___bmul@multiplier                                           cstackBANK0  0030
+___bmul@product                                              cstackBANK0  002F
+___int_sp                                                    stack        0000
+___latbits                                                   (abs)        0002
+___lldiv                                                     text8        097C
+___lldiv@counter                                             cstackBANK0  0047
+___lldiv@dividend                                            cstackBANK0  003E
+___lldiv@divisor                                             cstackBANK0  003A
+___lldiv@quotient                                            cstackBANK0  0043
+___llmod                                                     text7        092E
+___llmod@counter                                             cstackBANK0  0043
+___llmod@dividend                                            cstackBANK0  003E
+___llmod@divisor                                             cstackBANK0  003A
+___lmul                                                      text3        08ED
+___lmul@multiplicand                                         cstackBANK0  0031
+___lmul@multiplier                                           cstackBANK0  002D
+___lmul@product                                              cstackBANK0  0036
+___sp                                                        stack        0000
+__end_ofUART_Receive_Char@framing_error_msg_disp             stringtext   101C
+__end_ofUART_Receive_Char@overrun_error_msg_disp             stringtext   1017
+__end_of_ADC_Conf_Channel                                    text11       0A3D
+__end_of_ADC_Conv_Over_Appl_Proc                             text18       0845
+__end_of_ADC_Start_Conv                                      text4        0D4D
+__end_of_Encoded_To_Actual_Analog_Val_Calc                   text2        1000
+__end_of_External_Interrupt_Occured_Appl_Proc                text17       0004
+__end_of_Interrupt_ISR                                       text13       0BBD
+__end_of_Is_ADC_Converting                                   text10       0852
+__end_of_Timer1_Req_Time_Expiry_Appl_Proc                    text16       0800
+__end_of_Timer1_Stop                                         text15       0881
+__end_of_UART_Init                                           text1        08C8
+__end_of_UART_Transmit_Char                                  text9        0864
+__end_of_UART_Transmit_Num                                   text6        07C4
+__end_of_UART_Transmit_Str                                   text5        08ED
+__end_of___bmul                                              text12       08A5
+__end_of___lldiv                                             text8        09DC
+__end_of___llmod                                             text7        097C
+__end_of___lmul                                              text3        092E
+__end_of__initialization                                     cinit        005E
+__end_of__stringtab                                          stringtext   1012
+__end_of_main                                                maintext     0452
+__end_ofi1___bmul                                            text14       0892
+__initialization                                             cinit        0015
+__pbssBANK0                                                  bssBANK0     0050
+__pbssBANK3                                                  bssBANK3     0190
+__pbssCOMMON                                                 bssCOMMON    007D
+__pcstackBANK0                                               cstackBANK0  0020
+__pcstackBANK1                                               cstackBANK1  00A0
+__pcstackBANK2                                               cstackBANK2  013A
+__pcstackCOMMON                                              cstackCOMMON 0070
+__pdataBANK2                                                 dataBANK2    0110
+__pdataBANK3                                                 dataBANK3    01DB
+__pdataCOMMON                                                dataCOMMON   0078
+__pidataBANK2                                                idataBANK2   07C4
+__pidataBANK3                                                idataBANK3   0864
+__pidataCOMMON                                               idataCOMMON  0845
+__pintentry                                                  intentry     0004
+__pmaintext                                                  maintext     0062
+__pstringtext                                                stringtext   1000
+__ptext1                                                     text1        08A5
+__ptext10                                                    text10       084A
+__ptext11                                                    text11       09DC
+__ptext12                                                    text12       0892
+__ptext13                                                    text13       0A3D
+__ptext14                                                    text14       0881
+__ptext15                                                    text15       0872
+__ptext16                                                    text16       07FF
+__ptext17                                                    text17       0003
+__ptext18                                                    text18       0844
+__ptext2                                                     text2        0D4D
+__ptext3                                                     text3        08ED
+__ptext4                                                     text4        0BBD
+__ptext5                                                     text5        08C8
+__ptext6                                                     text6        0452
+__ptext7                                                     text7        092E
+__ptext8                                                     text8        097C
+__ptext9                                                     text9        085A
+__size_of_ADC_Conf_Channel                                   (abs)        0000
+__size_of_ADC_Conv_Over_Appl_Proc                            (abs)        0000
+__size_of_ADC_Start_Conv                                     (abs)        0000
+__size_of_Encoded_To_Actual_Analog_Val_Calc                  (abs)        0000
+__size_of_External_Interrupt_Occured_Appl_Proc               (abs)        0000
+__size_of_Interrupt_ISR                                      (abs)        0000
+__size_of_Is_ADC_Converting                                  (abs)        0000
+__size_of_Timer1_Req_Time_Expiry_Appl_Proc                   (abs)        0000
+__size_of_Timer1_Stop                                        (abs)        0000
+__size_of_UART_Init                                          (abs)        0000
+__size_of_UART_Transmit_Char                                 (abs)        0000
+__size_of_UART_Transmit_Num                                  (abs)        0000
+__size_of_UART_Transmit_Str                                  (abs)        0000
+__size_of___bmul                                             (abs)        0000
+__size_of___lldiv                                            (abs)        0000
+__size_of___llmod                                            (abs)        0000
+__size_of___lmul                                             (abs)        0000
+__size_of_main                                               (abs)        0000
+__size_ofi1___bmul                                           (abs)        0000
+__stringbase                                                 stringtext   1012
+__stringtab                                                  stringtext   1000
+_adc_cur_channel                                             bssBANK0     005F
+_adc_cur_parameters                                          bssBANK3     01D6
+_cur_disp_lcd_loc                                            dataCOMMON   007A
+_cur_input_lcd_loc                                           dataBANK3    01E7
+_lcd_avail_loc_within_limit                                  dataCOMMON   007C
+_lcd_read_command                                            bssBANK3     01D4
+_lcd_unit                                                    bssBANK0     0050
+_main                                                        maintext     0062
+_measure_pulse_lower_count                                   bssBANK3     01AC
+_measure_pulse_upper_count                                   bssBANK3     01A8
+_timer1_1_update                                             bssBANK3     01BC
+_timer1_cur_run_state                                        bssBANK0     005E
+_timer1_cur_service_type                                     bssBANK0     005C
+_timer1_elapsed_num_overflow_1_update                        bssBANK3     01C0
+_timer1_elapsed_num_update                                   bssBANK3     01D2
+_timer1_init_val                                             bssBANK0     0056
+_timer1_last_run_state_before_stop                           bssBANK0     005D
+_timer1_prescale                                             dataCOMMON   0078
+_timer1_prescale_shift                                       bssBANK3     01D0
+_timer1_req_time_delay_in_milli_sec                          bssBANK3     01B0
+_timer1_req_time_max_update                                  bssBANK3     01B8
+_timer2_1_update                                             bssBANK3     019C
+_timer2_cur_run_state                                        bssBANK0     005B
+_timer2_cur_service_type                                     bssCOMMON    007D
+_timer2_elapsed_num_overflow_1_update                        bssBANK3     01A0
+_timer2_init_val                                             bssBANK3     01A4
+_timer2_last_run_state_before_stop                           bssBANK0     005A
+_timer2_prescale                                             dataBANK3    01E5
+_timer2_prescale_shift                                       bssBANK3     01CE
+_timer2_req_time_delay_in_milli_sec                          bssBANK3     0190
+_timer2_req_time_max_update                                  bssBANK3     0194
+_to_disp                                                     bssBANK3     01C8
+btemp                                                        (abs)        007E
+clear_ram0                                                   clrtext      0852
+end_of_initialization                                        cinit        005E
+i1___bmul                                                    text14       0881
+i1___bmul@multiplicand                                       cstackCOMMON 0070
+i1___bmul@multiplier                                         cstackCOMMON 0072
+i1___bmul@product                                            cstackCOMMON 0073
+init_fetch0                                                  inittext     07EE
+init_ram0                                                    inittext     07F2
+interrupt_function                                           intentry     0004
+intlevel0                                                    functab      0000
+intlevel1                                                    functab      0000
+intlevel2                                                    functab      0000
+intlevel3                                                    functab      0000
+intlevel4                                                    functab      0000
+intlevel5                                                    functab      0000
+main@calc_r_source_rms_volt                                  cstackBANK2  0147
+main@fault_occured_flag                                      cstackBANK2  013A
+main@i                                                       cstackBANK2  0143
+main@max_r_at_ch_encoded_value                               cstackBANK2  0151
+main@r_at_ch_encoded_val                                     cstackBANK2  013F
+main@r_at_ch_peak_volt_frac                                  cstackBANK2  0159
+main@r_at_ch_peak_volt_int                                   cstackBANK2  0155
+main@temp                                                    cstackBANK2  013B
+main@temp_frac                                               cstackBANK2  014D
+main@temp_int                                                cstackBANK2  0149
+reset_vec                                                    reset_vec    0000
+saved_w                                                      (abs)        007E
+stackhi                                                      (abs)        0000
+stacklo                                                      (abs)        0000
+start                                                        init         0012
+start_initialization                                         cinit        0015
+wtemp0                                                       (abs)        007E
+
+
+FUNCTION INFORMATION:
+
+ *************** function _main *****************
+ Defined at:
+		line 68 in file "main.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+  r_at_ch_peak    4   31[BANK2 ] unsigned long 
+  r_at_ch_peak    4   27[BANK2 ] unsigned long 
+  max_r_at_ch_    4   23[BANK2 ] unsigned long 
+  temp_frac       4   19[BANK2 ] unsigned long 
+  temp_int        4   15[BANK2 ] unsigned long 
+  i               4    9[BANK2 ] unsigned long 
+  r_at_ch_enco    4    5[BANK2 ] unsigned long 
+  temp            4    1[BANK2 ] unsigned long 
+  calc_r_sourc    2   13[BANK2 ] unsigned int 
+  actual_r_sou    2    0        unsigned int 
+  fault_occure    1    0[BANK2 ] unsigned char 
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, fsr0l, fsr0h, status,2, status,0, btemp+1, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+      Params:         0       0       0       0       0
+      Locals:         0       0       0       0      35
+      Temps:          0       0       4       0       0
+      Totals:         0       0       4       0      35
+Total ram usage:       39 bytes
+ Hardware stack levels required when called:    5
+ This function calls:
+		_ADC_Conf_Channel
+		_ADC_Start_Conv
+		_Encoded_To_Actual_Analog_Val_Calc
+		_UART_Init
+		_UART_Transmit_Char
+		_UART_Transmit_Num
+		_UART_Transmit_Str
+		___bmul
+		___lldiv
+		___lmul
+ This function is called by:
+		Startup code after reset
+ This function uses a non-reentrant model
+
+
+ *************** function _UART_Init *****************
+ Defined at:
+		line 33 in file "uart.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+      Params:         0       0       0       0       0
+      Locals:         0       0       0       0       0
+      Temps:          0       0       0       0       0
+      Totals:         0       0       0       0       0
+Total ram usage:        0 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    2
+ This function calls:
+		Nothing
+ This function is called by:
+		_main
+ This function uses a non-reentrant model
+
+
+ *************** function _Encoded_To_Actual_Analog_Val_Calc *****************
+ Defined at:
+		line 251 in file "adc.c"
+ Parameters:    Size  Location     Type
+  adc_value       4    0[BANK1 ] unsigned long 
+  full_scale_a    4    4[BANK1 ] unsigned long 
+  min_analog_v    4    8[BANK1 ] unsigned long 
+  analog_val_i    1   12[BANK1 ] const PTR unsigned long 
+		 -> main@r_at_ch_peak_volt_int(4), 
+  analog_val_i    1   13[BANK1 ] const PTR unsigned long 
+		 -> main@r_at_ch_peak_volt_frac(4), 
+ Auto vars:     Size  Location     Type
+  remainder_va    4   30[BANK1 ] unsigned long 
+  remainder_va    4   26[BANK1 ] unsigned long 
+  remainder_va    4   22[BANK1 ] unsigned long 
+  temp_remaind    4   18[BANK1 ] unsigned long 
+  temp_val_1      4   14[BANK1 ] unsigned long 
+  temp_val_100    4    0        unsigned long 
+  temp_val_100    4    0        unsigned long 
+  temp_val_10     4    0        unsigned long 
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, fsr0l, fsr0h, status,2, status,0, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+      Params:         0       0      14       0       0
+      Locals:         0       0      20       0       0
+      Temps:          0       4       0       0       0
+      Totals:         0       4      34       0       0
+Total ram usage:       38 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    3
+ This function calls:
+		___lldiv
+		___llmod
+		___lmul
+ This function is called by:
+		_main
+ This function uses a non-reentrant model
+
+
+ *************** function ___lmul *****************
+ Defined at:
+		line 15 in file "C:\Program Files\Microchip\xc8\v1.44\sources\common\Umul32.c"
+ Parameters:    Size  Location     Type
+  multiplier      4   13[BANK0 ] unsigned long 
+  multiplicand    4   17[BANK0 ] unsigned long 
+ Auto vars:     Size  Location     Type
+  product         4   22[BANK0 ] unsigned long 
+ Return value:  Size  Location     Type
+                  4   13[BANK0 ] unsigned long 
+ Registers used:
+		wreg, status,2, status,0
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+      Params:         0       8       0       0       0
+      Locals:         0       4       0       0       0
+      Temps:          0       1       0       0       0
+      Totals:         0      13       0       0       0
+Total ram usage:       13 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    2
+ This function calls:
+		Nothing
+ This function is called by:
+		_Encoded_To_Actual_Analog_Val_Calc
+		_main
+		_Encoded_To_Percent_Calc
+		_Actual_Analog_Val_To_Encoded_Calc
+		_Timer1_Load_Init_Val_Calc
+		_Timer2_Load_Init_Val_Calc
+ This function uses a non-reentrant model
+
+
+ *************** function _ADC_Start_Conv *****************
+ Defined at:
+		line 62 in file "adc.c"
+ Parameters:    Size  Location     Type
+  set_adc_para    1    wreg     PTR struct .
+		 -> adc_cur_parameters(5), 
+ Auto vars:     Size  Location     Type
+  set_adc_para    1   56[BANK1 ] PTR struct .
+		 -> adc_cur_parameters(5), 
+  adc_value_mo    2   54[BANK1 ] unsigned int 
+  adc_value_le    2   52[BANK1 ] unsigned int 
+  rcvd_status     1   51[BANK1 ] unsigned char 
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, fsr0l, fsr0h, status,2, status,0, btemp+1, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+      Params:         0       0       0       0       0
+      Locals:         0       0       6       0       0
+      Temps:          0       0       6       0       0
+      Totals:         0       0      12       0       0
+Total ram usage:       12 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    4
+ This function calls:
+		_Is_ADC_Converting
+		_UART_Transmit_Char
+		_UART_Transmit_Num
+		_UART_Transmit_Str
+ This function is called by:
+		_main
+ This function uses a non-reentrant model
+
+
+ *************** function _UART_Transmit_Str *****************
+ Defined at:
+		line 83 in file "uart.c"
+ Parameters:    Size  Location     Type
+  transmit_str    2   14[BANK0 ] PTR const unsigned char 
+		 -> STR_14(54), STR_13(46), STR_12(52), STR_11(13), 
+		 -> STR_10(13), STR_9(21), STR_8(25), STR_7(25), 
+		 -> STR_6(3), STR_5(3), STR_4(3), STR_3(47), 
+		 -> STR_2(45), STR_1(35), 
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, fsr0l, fsr0h, status,2, status,0, btemp+1, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+      Params:         0       2       0       0       0
+      Locals:         0       0       0       0       0
+      Temps:          0       0       0       0       0
+      Totals:         0       2       0       0       0
+Total ram usage:        2 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    3
+ This function calls:
+		_UART_Transmit_Char
+ This function is called by:
+		_ADC_Start_Conv
+		_main
+		_ADC_Disable
+		_UART_Receive_Char
+		_Timer1_Run
+ This function uses a non-reentrant model
+
+
+ *************** function _UART_Transmit_Num *****************
+ Defined at:
+		line 370 in file "uart.c"
+ Parameters:    Size  Location     Type
+  uart_datanum    1    wreg     const enum E1694
+  uart_disp_da    4   40[BANK0 ] const struct .
+ Auto vars:     Size  Location     Type
+  uart_datanum    1   28[BANK1 ] const enum E1694
+  hex_data       16    0[BANK1 ] unsigned char [16]
+  num_data       10   16[BANK1 ] unsigned char [10]
+  disp_num        4   41[BANK1 ] unsigned long 
+  num             4   37[BANK1 ] unsigned long 
+  unit_digit      2   35[BANK1 ] unsigned int 
+  tens_digit      2   33[BANK1 ] unsigned int 
+  hundreds_dig    2   31[BANK1 ] unsigned int 
+  thousands_di    2   29[BANK1 ] unsigned int 
+  tens_thousan    2   26[BANK1 ] unsigned int 
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, fsr0l, fsr0h, status,2, status,0, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+      Params:         0       4       0       0       0
+      Locals:         0       0      45       0       0
+      Temps:          0       4       0       0       0
+      Totals:         0       8      45       0       0
+Total ram usage:       53 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    3
+ This function calls:
+		_UART_Transmit_Char
+		___lldiv
+		___llmod
+ This function is called by:
+		_ADC_Start_Conv
+		_main
+ This function uses a non-reentrant model
+
+
+ *************** function ___llmod *****************
+ Defined at:
+		line 6 in file "C:\Program Files\Microchip\xc8\v1.44\sources\common\llmod.c"
+ Parameters:    Size  Location     Type
+  divisor         4   26[BANK0 ] unsigned long 
+  dividend        4   30[BANK0 ] unsigned long 
+ Auto vars:     Size  Location     Type
+  counter         1   35[BANK0 ] unsigned char 
+ Return value:  Size  Location     Type
+                  4   26[BANK0 ] unsigned long 
+ Registers used:
+		wreg, status,2, status,0
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+      Params:         0       8       0       0       0
+      Locals:         0       1       0       0       0
+      Temps:          0       1       0       0       0
+      Totals:         0      10       0       0       0
+Total ram usage:       10 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    2
+ This function calls:
+		Nothing
+ This function is called by:
+		_Encoded_To_Actual_Analog_Val_Calc
+		_UART_Transmit_Num
+		_Encoded_To_Percent_Calc
+		_LCD_Disp_Num
+		_Timer1_Load_Init_Val_Calc
+		_Timer2_Load_Init_Val_Calc
+ This function uses a non-reentrant model
+
+
+ *************** function ___lldiv *****************
+ Defined at:
+		line 6 in file "C:\Program Files\Microchip\xc8\v1.44\sources\common\lldiv.c"
+ Parameters:    Size  Location     Type
+  divisor         4   26[BANK0 ] unsigned long 
+  dividend        4   30[BANK0 ] unsigned long 
+ Auto vars:     Size  Location     Type
+  quotient        4   35[BANK0 ] unsigned long 
+  counter         1   39[BANK0 ] unsigned char 
+ Return value:  Size  Location     Type
+                  4   26[BANK0 ] unsigned long 
+ Registers used:
+		wreg, status,2, status,0
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+      Params:         0       8       0       0       0
+      Locals:         0       5       0       0       0
+      Temps:          0       1       0       0       0
+      Totals:         0      14       0       0       0
+Total ram usage:       14 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    2
+ This function calls:
+		Nothing
+ This function is called by:
+		_Encoded_To_Actual_Analog_Val_Calc
+		_main
+		_UART_Transmit_Num
+		_Encoded_To_Percent_Calc
+		_Actual_Analog_Val_To_Encoded_Calc
+		_LCD_Disp_Num
+		_Timer1_Load_Init_Val_Calc
+		_Timer2_Load_Init_Val_Calc
+ This function uses a non-reentrant model
+
+
+ *************** function _UART_Transmit_Char *****************
+ Defined at:
+		line 65 in file "uart.c"
+ Parameters:    Size  Location     Type
+  transmit_cha    1    wreg     const unsigned char 
+ Auto vars:     Size  Location     Type
+  transmit_cha    1   13[BANK0 ] const unsigned char 
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+      Params:         0       0       0       0       0
+      Locals:         0       1       0       0       0
+      Temps:          0       0       0       0       0
+      Totals:         0       1       0       0       0
+Total ram usage:        1 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    2
+ This function calls:
+		Nothing
+ This function is called by:
+		_ADC_Start_Conv
+		_main
+		_UART_Transmit_Str
+		_UART_Transmit_Num
+		_LCD_Disp_Str
+		_UART_Receive_Char
+ This function uses a non-reentrant model
+
+
+ *************** function _Is_ADC_Converting *****************
+ Defined at:
+		line 229 in file "adc.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      unsigned char 
+ Registers used:
+		wreg
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+      Params:         0       0       0       0       0
+      Locals:         0       0       0       0       0
+      Temps:          0       0       0       0       0
+      Totals:         0       0       0       0       0
+Total ram usage:        0 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    2
+ This function calls:
+		Nothing
+ This function is called by:
+		_ADC_Start_Conv
+		_ADC_Disable
+ This function uses a non-reentrant model
+
+
+ *************** function _ADC_Conf_Channel *****************
+ Defined at:
+		line 37 in file "adc.c"
+ Parameters:    Size  Location     Type
+  set_adc_cur_    1    wreg     const enum E1739
+ Auto vars:     Size  Location     Type
+  set_adc_cur_    1   18[BANK0 ] const enum E1739
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, fsr0l, fsr0h, status,2, status,0, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+      Params:         0       0       0       0       0
+      Locals:         0       1       0       0       0
+      Temps:          0       1       0       0       0
+      Totals:         0       2       0       0       0
+Total ram usage:        2 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    3
+ This function calls:
+		___bmul
+ This function is called by:
+		_main
+ This function uses a non-reentrant model
+
+
+ *************** function ___bmul *****************
+ Defined at:
+		line 4 in file "C:\Program Files\Microchip\xc8\v1.44\sources\common\Umul8.c"
+ Parameters:    Size  Location     Type
+  multiplier      1    wreg     unsigned char 
+  multiplicand    1   13[BANK0 ] unsigned char 
+ Auto vars:     Size  Location     Type
+  multiplier      1   16[BANK0 ] unsigned char 
+  product         1   15[BANK0 ] unsigned char 
+ Return value:  Size  Location     Type
+                  1    wreg      unsigned char 
+ Registers used:
+		wreg, status,2, status,0
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+      Params:         0       1       0       0       0
+      Locals:         0       2       0       0       0
+      Temps:          0       1       0       0       0
+      Totals:         0       4       0       0       0
+Total ram usage:        4 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    2
+ This function calls:
+		Nothing
+ This function is called by:
+		_ADC_Conf_Channel
+		_main
+		_Interrupt_ISR
+		_ADC_Disable
+ This function uses a non-reentrant model
+
+
+ *************** function _Interrupt_ISR *****************
+ Defined at:
+		line 37 in file "isr.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+  adc_value_mo    2    6[COMMON] unsigned int 
+  adc_value_le    2    4[COMMON] unsigned int 
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, fsr0l, fsr0h, status,2, status,0, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+      Params:         0       0       0       0       0
+      Locals:         4       0       0       0       0
+      Temps:          0      13       0       0       0
+      Totals:         4      13       0       0       0
+Total ram usage:       17 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    1
+ This function calls:
+		_ADC_Conv_Over_Appl_Proc
+		_External_Interrupt_Occured_Appl_Proc
+		_Timer1_Req_Time_Expiry_Appl_Proc
+		_Timer1_Stop
+		i1___bmul
+ This function is called by:
+		Interrupt level 1
+ This function uses a non-reentrant model
+
+
+ *************** function i1___bmul *****************
+ Defined at:
+		line 4 in file "C:\Program Files\Microchip\xc8\v1.44\sources\common\Umul8.c"
+ Parameters:    Size  Location     Type
+  multiplier      1    wreg     unsigned char 
+  multiplicand    1    0[COMMON] unsigned char 
+ Auto vars:     Size  Location     Type
+  multiplier      1    2[COMMON] unsigned char 
+  __bmul          1    3[COMMON] unsigned char 
+ Return value:  Size  Location     Type
+                  1    wreg      unsigned char 
+ Registers used:
+		wreg, status,2, status,0
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+      Params:         1       0       0       0       0
+      Locals:         2       0       0       0       0
+      Temps:          1       0       0       0       0
+      Totals:         4       0       0       0       0
+Total ram usage:        4 bytes
+ Hardware stack levels used:    1
+ This function calls:
+		Nothing
+ This function is called by:
+		_Interrupt_ISR
+ This function uses a non-reentrant model
+
+
+ *************** function _Timer1_Stop *****************
+ Defined at:
+		line 169 in file "timer.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, status,2
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+      Params:         0       0       0       0       0
+      Locals:         0       0       0       0       0
+      Temps:          1       0       0       0       0
+      Totals:         1       0       0       0       0
+Total ram usage:        1 bytes
+ Hardware stack levels used:    1
+ This function calls:
+		Nothing
+ This function is called by:
+		_Interrupt_ISR
+		_Timer1_Run
+ This function uses a non-reentrant model
+
+
+ *************** function _Timer1_Req_Time_Expiry_Appl_Proc *****************
+ Defined at:
+		line 56 in file "intp_event_handle.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		None
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+      Params:         0       0       0       0       0
+      Locals:         0       0       0       0       0
+      Temps:          0       0       0       0       0
+      Totals:         0       0       0       0       0
+Total ram usage:        0 bytes
+ Hardware stack levels used:    1
+ This function calls:
+		Nothing
+ This function is called by:
+		_Interrupt_ISR
+ This function uses a non-reentrant model
+
+
+ *************** function _External_Interrupt_Occured_Appl_Proc *****************
+ Defined at:
+		line 38 in file "intp_event_handle.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		None
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+      Params:         0       0       0       0       0
+      Locals:         0       0       0       0       0
+      Temps:          0       0       0       0       0
+      Totals:         0       0       0       0       0
+Total ram usage:        0 bytes
+ Hardware stack levels used:    1
+ This function calls:
+		Nothing
+ This function is called by:
+		_Interrupt_ISR
+ This function uses a non-reentrant model
+
+
+ *************** function _ADC_Conv_Over_Appl_Proc *****************
+ Defined at:
+		line 74 in file "intp_event_handle.c"
+ Parameters:    Size  Location     Type
+  adc_cur_chan    1    wreg     enum E1834
+ Auto vars:     Size  Location     Type
+  adc_cur_chan    1    0[COMMON] enum E1834
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+      Params:         0       0       0       0       0
+      Locals:         0       0       0       0       0
+      Temps:          0       0       0       0       0
+      Totals:         0       0       0       0       0
+Total ram usage:        0 bytes
+ Hardware stack levels used:    1
+ This function calls:
+		Nothing
+ This function is called by:
+		_Interrupt_ISR
+ This function uses a non-reentrant model
+
+
+
+MODULE INFORMATION
+
+Module		Function		Class		Link	Load	Size
+uart.c
+		_UART_Transmit_Num		CODE           	0452	0000	883
+		_UART_Transmit_Str		CODE           	08C8	0000	38
+		_UART_Init     		CODE           	08A5	0000	36
+		_UART_Transmit_Char		CODE           	085A	0000	11
+
+uart.c estimated size: 968
+
+C:\Program Files\Microchip\xc8\v1.44\sources\common\lldiv.c
+		___lldiv       		CODE           	097C	0000	97
+
+C:\Program Files\Microchip\xc8\v1.44\sources\common\lldiv.c estimated size: 97
+
+C:\Program Files\Microchip\xc8\v1.44\sources\common\Umul8.c
+		___bmul        		CODE           	0892	0000	20
+
+C:\Program Files\Microchip\xc8\v1.44\sources\common\Umul8.c estimated size: 20
+
+timer.c
+		_Timer1_Stop   		CODE           	0872	0000	16
+
+timer.c estimated size: 16
+
+C:\Program Files\Microchip\xc8\v1.44\sources\common\Umul32.c
+		___lmul        		CODE           	08ED	0000	66
+
+C:\Program Files\Microchip\xc8\v1.44\sources\common\Umul32.c estimated size: 66
+
+adc.c
+		_Is_ADC_Converting		CODE           	084A	0000	9
+		_ADC_Start_Conv		CODE           	0BBD	0000	401
+		_Encoded_To_Actual_Analog_Val_Calc		CODE           	0D4D	0000	692
+		_ADC_Conf_Channel		CODE           	09DC	0000	98
+
+adc.c estimated size: 1200
+
+intp_event_handle.c
+		_ADC_Conv_Over_Appl_Proc		CODE           	0844	0000	2
+		_External_Interrupt_Occured_Appl_Proc		CODE           	0003	0000	2
+		_Timer1_Req_Time_Expiry_Appl_Proc		CODE           	07FF	0000	2
+
+intp_event_handle.c estimated size: 6
+
+isr.c
+		_Interrupt_ISR 		CODE           	0A3D	0000	385
+
+isr.c estimated size: 385
+
+shared
+		__stringtab    		STRCODE        	1000	0000	19
+		UART_Receive_Char@overrun_error_msg_disp		STRCODE        	1012	0000	6
+		__initialization		CODE           	0015	0000	74
+		i1___bmul      		CODE           	0881	0000	18
+		UART_Receive_Char@framing_error_msg_disp		STRCODE        	1017	0000	6
+
+shared estimated size: 123
+
+C:\Program Files\Microchip\xc8\v1.44\sources\common\llmod.c
+		___llmod       		CODE           	092E	0000	79
+
+C:\Program Files\Microchip\xc8\v1.44\sources\common\llmod.c estimated size: 79
+
+main.c
+		_main          		CODE           	0062	0000	1009
+
+main.c estimated size: 1009
+
